@@ -62,10 +62,19 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground font-body;
+    cursor: none;
   }
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-heading;
+  }
+
+  * {
+    cursor: none;
+  }
+
+  a, button {
+    cursor: none !important;
   }
 }
 
@@ -81,4 +90,36 @@ All colors MUST be HSL.
   .gradient-text {
     @apply bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent;
   }
+
+  .cursor-hover {
+    cursor: pointer;
+  }
+}
+
+@keyframes shiny {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: -200% center;
+  }
+}
+
+@keyframes fuzzy {
+  0%, 100% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+  50% {
+    filter: blur(1px);
+    opacity: 0.8;
+  }
+}
+
+.animate-shiny {
+  animation: shiny 3s linear infinite;
+}
+
+.animate-fuzzy {
+  animation: fuzzy 2s ease-in-out infinite;
 }

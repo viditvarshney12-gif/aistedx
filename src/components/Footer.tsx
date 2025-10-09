@@ -19,22 +19,22 @@ const Footer = () => {
             <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Quick Links</h4>
             <ul className="space-y-2 sm:space-y-3">
               <li>
-                <a href="/" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block text-sm sm:text-base">
+                <a href="/" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block text-sm sm:text-base cursor-hover">
                   Home
                 </a>
               </li>
               <li>
-                <a href="/about" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block text-sm sm:text-base">
+                <a href="/about" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block text-sm sm:text-base cursor-hover">
                   About
                 </a>
               </li>
               <li>
-                <a href="/speakers" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block text-sm sm:text-base">
+                <a href="/speakers" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block text-sm sm:text-base cursor-hover">
                   Speakers
                 </a>
               </li>
               <li>
-                <a href="/team" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block text-sm sm:text-base">
+                <a href="/team" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block text-sm sm:text-base cursor-hover">
                   The Team
                 </a>
               </li>
@@ -48,7 +48,7 @@ const Footer = () => {
                 href="https://www.instagram.com/tedxahlconintlschool/?hl=en"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-secondary flex items-center justify-center hover:bg-primary transition-all duration-300 hover:scale-110 hover-glow group"
+                className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-secondary flex items-center justify-center hover:bg-primary transition-all duration-300 hover:scale-110 hover-glow group cursor-hover"
                 aria-label="Instagram"
               >
                 <Instagram size={20} className="text-foreground group-hover:text-primary-foreground transition-colors sm:w-6 sm:h-6" />
@@ -57,7 +57,7 @@ const Footer = () => {
                 href="https://x.com/TedxAhlconIntl"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-secondary flex items-center justify-center hover:bg-primary transition-all duration-300 hover:scale-110 hover-glow group"
+                className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-secondary flex items-center justify-center hover:bg-primary transition-all duration-300 hover:scale-110 hover-glow group cursor-hover"
                 aria-label="X (Twitter)"
               >
                 <Twitter size={20} className="text-foreground group-hover:text-primary-foreground transition-colors sm:w-6 sm:h-6" />

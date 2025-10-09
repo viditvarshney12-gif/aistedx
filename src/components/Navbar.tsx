@@ -31,7 +31,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
-          <Link to="/" className="flex items-center space-x-1 sm:space-x-2 group">
+          <Link to="/" className="flex items-center space-x-1 sm:space-x-2 group cursor-hover">
             <span className="text-xl sm:text-2xl font-bold text-primary group-hover:scale-110 transition-all duration-300">
               TEDx
             </span>
@@ -44,7 +44,7 @@ const Navbar = () => {
               <Link
                 key={item.path}
                 to={item.path}
-                className={`text-sm lg:text-base font-medium transition-all duration-300 relative group ${
+                className={`text-sm lg:text-base font-medium transition-all duration-300 relative group cursor-hover ${
                   location.pathname === item.path
                     ? "text-primary"
                     : "text-foreground hover:text-primary hover:scale-105"
