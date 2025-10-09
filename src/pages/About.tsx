@@ -12,13 +12,14 @@ const About = () => {
         compact
       />
 
-      <div className="container mx-auto px-4 py-20">
-        <div className="max-w-4xl mx-auto space-y-16">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-28">
+        <div className="max-w-5xl mx-auto space-y-16 sm:space-y-20 lg:space-y-24">
           <div className="animate-fade-in-up">
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-foreground">
-              About <span className="text-primary">TEDx</span>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 sm:mb-8 text-foreground hover:text-primary transition-colors duration-300">
+              About <span className="gradient-text">TEDx</span>
             </h2>
-            <div className="space-y-6 text-muted-foreground text-lg leading-relaxed">
+            <div className="w-20 h-1 bg-primary rounded-full mb-6 sm:mb-8" />
+            <div className="space-y-6 text-muted-foreground text-base sm:text-lg leading-relaxed bg-card border border-border rounded-xl p-6 sm:p-8 lg:p-10 hover-lift">
               <p>
                 In the spirit of discovering and spreading ideas, TEDx is a program of local, self-organized events that bring people together to share a TED-like experience. At a TEDx event, TED Talks video and live speakers combine to spark deep discussion and connection. These local, self-organized events are branded TEDx, where x = independently organized TED event. The TED Conference provides general guidance for the TEDx program, but individual TEDx events are self-organized. (Subject to certain rules and regulations.)
               </p>
@@ -26,10 +27,11 @@ const About = () => {
           </div>
 
           <div className="animate-fade-in-up" style={{ animationDelay: '0.2s', opacity: 0, animationFillMode: 'forwards' }}>
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-foreground">
-              About <span className="text-primary">TED</span>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 sm:mb-8 text-foreground hover:text-primary transition-colors duration-300">
+              About <span className="gradient-text">TED</span>
             </h2>
-            <div className="space-y-6 text-muted-foreground text-lg leading-relaxed">
+            <div className="w-20 h-1 bg-primary rounded-full mb-6 sm:mb-8" />
+            <div className="space-y-6 text-muted-foreground text-base sm:text-lg leading-relaxed bg-card border border-border rounded-xl p-6 sm:p-8 lg:p-10 hover-lift">
               <p>
                 TED is a nonprofit, nonpartisan organization dedicated to discovering, debating and spreading ideas that spark conversation, deepen understanding and drive meaningful change. Our organization is devoted to curiosity, reason, wonder and the pursuit of knowledge — without an agenda. We welcome people from every discipline and culture who seek a deeper understanding of the world and connection with others, and we invite everyone to engage with ideas and activate them in your community.
               </p>
@@ -40,11 +42,17 @@ const About = () => {
             </div>
           </div>
 
-          <div className="bg-card border border-border rounded-lg p-8 animate-fade-in-up" style={{ animationDelay: '0.4s', opacity: 0, animationFillMode: 'forwards' }}>
-            <h3 className="text-2xl font-bold mb-4 text-primary">Event Details</h3>
-            <div className="space-y-2 text-muted-foreground">
-              <p><strong className="text-foreground">Date:</strong> 26th October, 2024</p>
-              <p><strong className="text-foreground">Venue:</strong> Ahlcon International School, Mayur Vihar Phase-1, Delhi, 110091, India</p>
+          <div className="bg-gradient-to-br from-card to-secondary border border-primary/20 rounded-xl p-6 sm:p-8 lg:p-10 animate-fade-in-up hover-lift shadow-xl" style={{ animationDelay: '0.4s', opacity: 0, animationFillMode: 'forwards' }}>
+            <h3 className="text-2xl sm:text-3xl font-bold mb-6 gradient-text">Event Details</h3>
+            <div className="space-y-3 sm:space-y-4">
+              <div className="flex flex-col sm:flex-row sm:items-center space-y-1 sm:space-y-0">
+                <span className="text-primary font-semibold text-base sm:text-lg min-w-[100px]">Date:</span>
+                <span className="text-foreground text-base sm:text-lg">1st November, 2025</span>
+              </div>
+              <div className="flex flex-col sm:flex-row sm:items-start space-y-1 sm:space-y-0">
+                <span className="text-primary font-semibold text-base sm:text-lg min-w-[100px]">Venue:</span>
+                <span className="text-foreground text-base sm:text-lg">Ahlcon International School, Mayur Vihar Phase-1, Delhi, 110091, India</span>
+              </div>
             </div>
           </div>
         </div>

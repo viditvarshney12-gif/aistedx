@@ -1,7 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
-import { Sparkles } from "lucide-react";
 
 const Speakers = () => {
   return (
@@ -13,24 +12,21 @@ const Speakers = () => {
         compact
       />
 
-      <div className="container mx-auto px-4 py-20">
-        <div className="max-w-3xl mx-auto text-center">
-          <div className="bg-card border border-border rounded-lg p-12 animate-fade-in-up">
-            <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center animate-glow-pulse">
-              <Sparkles size={48} className="text-primary" />
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-28">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="animate-fade-in-up">
+            <div className="mb-8 sm:mb-12">
+              <div className="w-24 h-24 sm:w-32 sm:h-32 mx-auto mb-6 sm:mb-8 rounded-full bg-gradient-to-br from-primary to-primary-glow flex items-center justify-center animate-float shadow-2xl hover-glow">
+                <span className="text-5xl sm:text-6xl">🎤</span>
+              </div>
             </div>
-            
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-              Coming Soon
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 sm:mb-8 text-foreground">
+              <span className="gradient-text">Coming Soon</span>
             </h2>
-            
-            <p className="text-muted-foreground text-lg mb-8">
-              We're curating an incredible lineup of speakers who will share their groundbreaking ideas and inspiring stories.
+            <div className="w-20 h-1 bg-primary rounded-full mx-auto mb-6 sm:mb-8" />
+            <p className="text-muted-foreground text-base sm:text-lg md:text-xl leading-relaxed px-4">
+              We're excited to announce our incredible lineup of speakers soon. Stay tuned for updates on the inspiring voices that will be sharing their ideas worth spreading at TEDxAhlconIntlSchool.
             </p>
-            
-            <div className="inline-block px-6 py-3 bg-gradient-to-r from-primary to-primary-glow text-primary-foreground rounded-full font-semibold">
-              Speakers will be announced soon
-            </div>
           </div>
         </div>
       </div>

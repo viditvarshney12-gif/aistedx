@@ -16,14 +16,14 @@ const Hero = ({ title, subtitle, description, imageUrl, compact = false }: HeroP
   }, []);
 
   return (
-    <div className={`relative ${compact ? 'h-[40vh] min-h-[300px]' : 'h-[90vh] min-h-[600px]'} flex items-center justify-center overflow-hidden`}>
+    <div className={`relative ${compact ? 'h-[40vh] min-h-[300px]' : 'h-screen min-h-[600px]'} flex items-center justify-center overflow-hidden`}>
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         {imageUrl ? (
           <img
             src={imageUrl}
             alt={title}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover scale-105 animate-[scale-in_1.5s_ease-out]"
           />
         ) : (
           <div className="w-full h-full bg-gradient-to-br from-background via-background to-card" />
@@ -40,18 +40,18 @@ const Hero = ({ title, subtitle, description, imageUrl, compact = false }: HeroP
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 text-center">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           {subtitle && (
-            <p className="text-primary text-sm md:text-base font-semibold uppercase tracking-wider mb-4 animate-fade-in">
+            <p className="text-primary text-xs sm:text-sm md:text-base font-semibold uppercase tracking-wider mb-4 sm:mb-6 animate-fade-in">
               {subtitle}
             </p>
           )}
-          <h1 className={`font-bold text-foreground mb-6 animate-fade-in-up ${compact ? 'text-4xl md:text-5xl' : 'text-5xl md:text-7xl'}`}>
+          <h1 className={`font-bold text-foreground mb-4 sm:mb-6 animate-fade-in-up ${compact ? 'text-3xl sm:text-4xl md:text-5xl' : 'text-4xl sm:text-5xl md:text-6xl lg:text-7xl'}`}>
             {title}
           </h1>
           {description && (
-            <p className="text-muted-foreground text-lg md:text-xl max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: '0.2s', opacity: 0, animationFillMode: 'forwards' }}>
+            <p className="text-muted-foreground text-base sm:text-lg md:text-xl max-w-3xl mx-auto animate-fade-in px-4" style={{ animationDelay: '0.2s', opacity: 0, animationFillMode: 'forwards' }}>
               {description}
             </p>
           )}

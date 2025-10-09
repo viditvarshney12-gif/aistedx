@@ -21,6 +21,7 @@ All colors MUST be HSL.
     --primary-foreground: 0 0% 100%;
     
     --primary-glow: 356 100% 65%;
+    --primary-dark: 356 100% 40%;
 
     --secondary: 0 0% 15%;
     --secondary-foreground: 0 0% 98%;
@@ -43,11 +44,14 @@ All colors MUST be HSL.
     --gradient-primary: linear-gradient(135deg, hsl(356 100% 52%), hsl(356 100% 40%));
     --gradient-hero: linear-gradient(135deg, hsl(0 0% 0%), hsl(0 0% 10%));
     --gradient-overlay: linear-gradient(180deg, transparent, hsl(0 0% 0% / 0.8));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 8%), hsl(0 0% 5%));
     
     --shadow-glow: 0 0 40px hsl(356 100% 52% / 0.3);
     --shadow-card: 0 10px 30px -10px hsl(0 0% 0% / 0.5);
+    --shadow-hover: 0 20px 40px -10px hsl(356 100% 52% / 0.2);
     
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
 }
 
@@ -57,6 +61,24 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-body;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer utilities {
+  .hover-lift {
+    @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_40px_-10px_hsl(356_100%_52%_/_0.2)];
+  }
+
+  .hover-glow {
+    @apply transition-all duration-300 hover:shadow-[0_0_40px_hsl(356_100%_52%_/_0.3)];
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent;
   }
 }

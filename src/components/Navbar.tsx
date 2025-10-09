@@ -25,29 +25,29 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-background/95 backdrop-blur-md border-b border-border shadow-lg" : "bg-transparent"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        isScrolled ? "bg-background/95 backdrop-blur-lg border-b border-border shadow-2xl" : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
-          <Link to="/" className="flex items-center space-x-2 group">
-            <span className="text-2xl font-bold text-primary group-hover:scale-105 transition-transform">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16 sm:h-20">
+          <Link to="/" className="flex items-center space-x-1 sm:space-x-2 group">
+            <span className="text-xl sm:text-2xl font-bold text-primary group-hover:scale-110 transition-all duration-300">
               TEDx
             </span>
-            <span className="text-2xl font-light text-foreground">AhlconIntlSchool</span>
+            <span className="text-xl sm:text-2xl font-light text-foreground">AhlconIntlSchool</span>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
             {navItems.map((item) => (
               <Link
                 key={item.path}
                 to={item.path}
-                className={`text-sm font-medium transition-colors relative group ${
+                className={`text-sm lg:text-base font-medium transition-all duration-300 relative group ${
                   location.pathname === item.path
                     ? "text-primary"
-                    : "text-foreground hover:text-primary"
+                    : "text-foreground hover:text-primary hover:scale-105"
                 }`}
               >
                 {item.name}
@@ -62,8 +62,9 @@ const Navbar = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-foreground"
+            className="md:hidden text-foreground hover:text-primary transition-colors duration-300"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
