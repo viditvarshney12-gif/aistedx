@@ -45,7 +45,7 @@ const Footer = () => {
             <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Connect With Us</h4>
             <div className="flex space-x-4">
               <a
-                href="https://www.instagram.com/tedxahlconintlschool/?hl=en"
+                href="https://www.instagram.com/tedxahlconintlschool/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-secondary flex items-center justify-center hover:bg-primary transition-all duration-300 hover:scale-110 hover-glow group cursor-hover"

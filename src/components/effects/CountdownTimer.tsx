@@ -36,27 +36,22 @@ const CountdownTimer = ({ targetDate, className = '' }: CountdownTimerProps) => 
 
   const TimeUnit = ({ value, label }: { value: number; label: string }) => (
     <motion.div
-      className="flex flex-col items-center"
+      className="flex flex-col items-center bg-card/50 backdrop-blur-sm border border-primary/20 rounded-2xl p-6 sm:p-8 hover:border-primary/40 transition-all duration-300 hover:scale-105"
       initial={{ scale: 0.8, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
-      <motion.div
-        key={value}
-        initial={{ y: -20, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        className="text-4xl sm:text-5xl md:text-6xl font-bold gradient-text mb-2"
-      >
+      <div className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black gradient-text text-glow mb-3">
         {value.toString().padStart(2, '0')}
-      </motion.div>
-      <div className="text-xs sm:text-sm text-muted-foreground uppercase tracking-wider">
+      </div>
+      <div className="text-sm sm:text-base md:text-lg text-primary font-semibold uppercase tracking-widest">
         {label}
       </div>
     </motion.div>
   );
 
   return (
-    <div className={`flex gap-4 sm:gap-8 justify-center ${className}`}>
+    <div className={`grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 max-w-6xl mx-auto ${className}`}>
       <TimeUnit value={timeLeft.days} label="Days" />
       <TimeUnit value={timeLeft.hours} label="Hours" />
       <TimeUnit value={timeLeft.minutes} label="Minutes" />

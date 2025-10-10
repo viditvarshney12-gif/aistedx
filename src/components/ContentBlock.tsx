@@ -51,9 +51,9 @@ const ContentBlock = ({ heading, body, imageUrl, reverse = false }: ContentBlock
               {heading}
             </h2>
             <div className="w-20 h-1 bg-primary rounded-full" />
-            <p className="text-muted-foreground text-base sm:text-lg lg:text-xl leading-relaxed whitespace-pre-line">
-              {body}
-            </p>
+      <div className="text-base sm:text-lg md:text-xl text-foreground/90 leading-relaxed whitespace-pre-line font-medium">
+        {body}
+      </div>
           </div>
 
           {/* Image */}
