@@ -4,7 +4,7 @@ import CustomCursor from "@/components/CustomCursor";
 import FuzzyText from "@/components/effects/FuzzyText";
 import ScrollReveal from "@/components/effects/ScrollReveal";
 import ScrollFloat from "@/components/effects/ScrollFloat";
-import tedStage from "@/assets/ted-stage.png";
+import teamPhoto from "@/assets/team-photo.jpg";
 
 const Team = () => {
   return (
@@ -16,7 +16,7 @@ const Team = () => {
       <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src={tedStage}
+            src={teamPhoto}
             alt="Our Team"
             className="w-full h-full object-cover"
           />

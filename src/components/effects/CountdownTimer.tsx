@@ -36,15 +36,17 @@ const CountdownTimer = ({ targetDate, className = '' }: CountdownTimerProps) => 
 
   const TimeUnit = ({ value, label }: { value: number; label: string }) => (
     <motion.div
-      className="flex flex-col items-center bg-card/50 backdrop-blur-sm border border-primary/20 rounded-2xl p-6 sm:p-8 hover:border-primary/40 transition-all duration-300 hover:scale-105"
+      className="flex flex-col items-center bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-md border-2 border-primary/30 rounded-3xl p-8 sm:p-10 md:p-12 hover:border-primary/50 transition-all duration-300 shadow-lg hover:shadow-primary/20"
       initial={{ scale: 0.8, opacity: 0 }}
-      animate={{ scale: 1, opacity: 1 }}
+      whileInView={{ scale: 1, opacity: 1 }}
+      viewport={{ once: true }}
+      whileHover={{ scale: 1.05 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black gradient-text text-glow mb-3">
+      <div className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black font-title gradient-text mb-4">
         {value.toString().padStart(2, '0')}
       </div>
-      <div className="text-sm sm:text-base md:text-lg text-primary font-semibold uppercase tracking-widest">
+      <div className="text-base sm:text-lg md:text-xl text-primary/90 font-bold font-heading uppercase tracking-[0.3em]">
         {label}
       </div>
     </motion.div>

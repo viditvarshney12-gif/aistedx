@@ -10,10 +10,13 @@ import ScrollReveal from "@/components/effects/ScrollReveal";
 import ScrollFloat from "@/components/effects/ScrollFloat";
 import CircularGallery from "@/components/CircularGallery";
 import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
 import mainLogo from "@/assets/main-logo.png";
+import whatIsTedx from "@/assets/what-is-tedx.jpg";
+import heroBackground from "@/assets/hero-background.jpg";
+import afterglowLogo from "@/assets/afterglow-logo.png";
 
 const Home = () => {
-  // Set to 9 AM IST on November 1, 2025
   const eventDate = new Date('2025-11-01T09:00:00+05:30');
 
   return (
@@ -21,110 +24,164 @@ const Home = () => {
       <CustomCursor />
       <Navbar />
       
-      {/* Landing Page Hero - Full Screen */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Animated Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-primary/10">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,hsl(356_100%_52%_/_0.1),transparent_50%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,hsl(356_100%_52%_/_0.15),transparent_50%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,hsl(356_100%_52%_/_0.15),transparent_50%)]" />
+      {/* Hero Section - Full Screen with Background */}
+      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${heroBackground})` }}
+        >
+          <div className="absolute inset-0 bg-black/40" />
         </div>
 
-        <div className="container mx-auto px-4 relative z-10 text-center">
-          <ScrollReveal>
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-black mb-8">
-              <span className="text-primary text-glow">TEDx</span>
-              <span className="text-foreground">AhlconIntlSchool</span>
+        {/* Content */}
+        <div className="relative z-10 container mx-auto px-4 text-center">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1 }}
+            className="space-y-8"
+          >
+            <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-tight font-title">
+              <span className="block gradient-text text-glow-strong drop-shadow-2xl">
+                TEDxAhlconIntlSchool
+              </span>
             </h1>
-            <p className="text-xl sm:text-2xl md:text-3xl text-muted-foreground mb-12 max-w-2xl mx-auto font-light">
+            <p className="text-2xl sm:text-3xl md:text-4xl text-white font-light tracking-wide drop-shadow-lg font-varela">
               Ideas Worth Spreading
             </p>
-            <Button 
-              size="lg" 
-              className="text-lg px-8 py-6 hover-lift hover-glow font-semibold cursor-hover"
-            >
-              Buy Tickets
-            </Button>
-          </ScrollReveal>
+            <div className="pt-8">
+              <Button size="lg" className="text-xl px-12 py-7 rounded-full hover:scale-110 transition-all duration-300 cursor-hover bg-primary hover:bg-primary/90 text-white font-bold shadow-2xl shadow-primary/50 font-heading">
+                Buy Tickets
+              </Button>
+            </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Theme Section - Afterglow */}
-      <section className="py-20 sm:py-32 lg:py-40 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-gradient-to-b from-background to-card/30">
-        <div className="container mx-auto text-center">
-          <ScrollFloat>
-            <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-8 sm:mb-12">
-              <ShinyText>Afterglow</ShinyText>
-            </h2>
-          </ScrollFloat>
-          <ScrollReveal delay={0.2}>
-            <p className="text-2xl sm:text-3xl md:text-4xl text-primary font-bold mb-6 text-glow">
-              <SplitText delay={0.3}>Light that Outlives the Flame</SplitText>
-            </p>
-          </ScrollReveal>
-          <ScrollReveal delay={0.4}>
-            <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-medium">
-              Like the enduring radiance after a flame dies, ideas create lasting impressions that continue to illuminate and inspire. 
-              This year's theme explores how transformative thoughts persist, evolve, and brighten pathways long after their inception.
-            </p>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      {/* Countdown Section */}
-      <section className="py-20 sm:py-32 lg:py-40 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-card/30 to-background">
-        <div className="container mx-auto">
-          <ScrollReveal>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-center mb-16 sm:mb-20">
-              <ShinyText>Event Countdown</ShinyText>
-            </h2>
-            <CountdownTimer targetDate={eventDate} />
-          </ScrollReveal>
-        </div>
-      </section>
-
-      {/* Circular Gallery for Speakers */}
-      <section className="py-20 sm:py-32 px-4 sm:px-6 lg:px-8 bg-card/20">
-        <div className="container mx-auto">
-          <ScrollReveal>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-center mb-12">
-              <ShinyText>Our Speakers</ShinyText>
-            </h2>
-          </ScrollReveal>
-          <CircularGallery />
-        </div>
-      </section>
-
-      {/* TEDx Is Section */}
-      <section className="py-20 sm:py-28 lg:py-36 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-card/50">
-        <div className="container mx-auto">
-          <ScrollReveal>
-            <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-4">
-                TEDxAhlconIntlSchool is <RotatingText words={['Back', 'Bigger', 'Better', 'Bolder']} className="gradient-text text-glow" />
+      <ScrollReveal>
+        <section className="py-24 px-4 bg-gradient-to-b from-background to-background/50">
+          <div className="container mx-auto max-w-5xl text-center">
+            <ScrollFloat offset={30}>
+              <h2 className="text-5xl sm:text-6xl md:text-7xl font-black mb-6 font-title">
+                <ShinyText>Afterglow</ShinyText>
               </h2>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
+            </ScrollFloat>
+            <p className="text-2xl sm:text-3xl md:text-4xl mb-12 text-primary/90 font-bold font-heading">
+              <SplitText>Light that Outlives the Flame</SplitText>
+            </p>
+            <ScrollFloat offset={20} className="space-y-6 text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto font-varela">
+              <p>
+                An afterglow is the light that remains after the source has faded—a lasting impression, 
+                an echo of brilliance. It's the warmth that lingers after a fire, the glow that follows a sunset, 
+                and the impact that outlasts a moment.
+              </p>
+            </ScrollFloat>
+          </div>
+        </section>
+      </ScrollReveal>
+
+      {/* Event Countdown */}
+      <ScrollReveal>
+        <section className="py-28 px-4 bg-gradient-to-b from-background/50 to-background">
+          <div className="container mx-auto text-center">
+            <ScrollFloat offset={40}>
+              <h2 className="text-5xl sm:text-6xl md:text-7xl font-black mb-16 gradient-text text-glow font-title">
+                Event Countdown
+              </h2>
+            </ScrollFloat>
+            <CountdownTimer targetDate={eventDate} />
+          </div>
+        </section>
+      </ScrollReveal>
+
+      {/* Speakers Gallery */}
+      <ScrollReveal>
+        <section className="py-28 px-4 bg-gradient-to-b from-background to-background/50">
+          <div className="container mx-auto text-center">
+            <ScrollFloat offset={50}>
+              <h2 className="text-5xl sm:text-6xl md:text-7xl font-black mb-20 gradient-text text-glow font-title">
+                Our Speakers
+              </h2>
+            </ScrollFloat>
+            <CircularGallery />
+          </div>
+        </section>
+      </ScrollReveal>
+
+      {/* TEDx is Section */}
+      <ScrollReveal>
+        <section className="py-28 px-4 bg-gradient-to-b from-background/50 to-background">
+          <div className="container mx-auto text-center max-w-6xl">
+            <ScrollFloat offset={35}>
+              <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-12 font-title">
+                TEDxAhlconIntlSchool is{' '}
+                <RotatingText 
+                  words={['Back', 'Bigger', 'Better', 'Bolder']}
+                  className="gradient-text text-glow-strong"
+                />
+              </h2>
+            </ScrollFloat>
+          </div>
+        </section>
+      </ScrollReveal>
 
       <ContentBlock
         heading="What is TEDx"
-        body="In the spirit of ideas worth spreading, TED has created a program called TEDx. TEDx is a program of local, self-organized events that bring people together to share a TED-like experience. Our event is called TEDxAhlconIntlSchool, where x = independently organized TED event. At our TEDxAhlconIntlSchool event, TED Talks video and live speakers will combine to spark deep discussion and connection in a small group. The TED Conference provides general guidance for the TEDx program, but individual TEDx events, including ours, are self-organized."
-        imageUrl={mainLogo}
+        body="TEDx is a program of local, self-organized events that bring people together to share a TED-like experience. At a TEDx event, TED Talks video and live speakers combine to spark deep discussion and connection. These events are independently organized under a free license granted by TED."
+        imageUrl={whatIsTedx}
       />
 
       <ContentBlock
         heading="About TEDxAhlconIntlSchool"
-        body={`Let's dive into the world of ideas at TEDxAhlconIntlSchool and uncover the revolution beneath the surface. This is the 7th edition of TEDxAhlconIntlSchool, continuing our tradition of bringing together brilliant minds and transformative ideas.
-
-This event will illustrate how a single thought or action, much like light that persists after the flame, can spread influence across various facets of society and ignite further innovation. Our speakers will blend creativity and intellectual insight to inspire and engage you. Join us at TEDxAhlconIntlSchool for a transformative experience where ideas drive change and showcase the power of enduring thinking in shaping the future we envision.
-
-Date: 1st November, 2025 at 9:00 AM IST
-Venue: Ahlcon International School, Mayur Vihar Phase-1, Delhi, 110091, India`}
+        body={
+          <div className="space-y-4">
+            <p className="font-varela">
+              TEDxAhlconIntlSchool is a premier event bringing together innovative thinkers, inspiring speakers, and passionate individuals. Join us as we celebrate the 7th edition of this transformative experience.
+            </p>
+            <div className="pt-4 space-y-3">
+              <p className="text-2xl font-bold text-primary font-heading">
+                📅 November 1st, 2025 | 9:00 AM IST
+              </p>
+              <p className="text-2xl font-bold text-primary font-heading">
+                📍 Ahlcon International School, Mayur Vihar Phase 1, Delhi
+              </p>
+            </div>
+            <p className="font-varela pt-4">
+              Our theme 'Light that Outlives the Flame' explores ideas that create lasting impact beyond their moment of creation.
+            </p>
+          </div>
+        }
         imageUrl={mainLogo}
         reverse
       />
+
+      {/* Lanyard Section */}
+      <ScrollReveal>
+        <section className="py-28 px-4 bg-gradient-to-b from-background/50 to-background">
+          <div className="container mx-auto text-center max-w-4xl">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="relative p-12 rounded-3xl bg-gradient-to-br from-card/50 to-card/30 backdrop-blur-lg border-2 border-primary/30 shadow-2xl"
+            >
+              <div className="flex flex-col md:flex-row items-center justify-center gap-8">
+                <img src={mainLogo} alt="TEDx Logo" className="w-32 h-32 object-contain" />
+                <div>
+                  <h3 className="text-4xl sm:text-5xl font-black font-title gradient-text text-glow mb-4">
+                    See You There!
+                  </h3>
+                  <p className="text-xl text-muted-foreground font-varela">Join us for an unforgettable experience</p>
+                </div>
+                <img src={afterglowLogo} alt="Afterglow Logo" className="w-32 h-32 object-contain" />
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </ScrollReveal>
 
       <Footer />
     </div>

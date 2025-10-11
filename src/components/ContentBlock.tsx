@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 interface ContentBlockProps {
   heading: string;
-  body: string;
+  body: string | React.ReactNode;
   imageUrl?: string;
   reverse?: boolean;
 }
@@ -47,13 +47,13 @@ const ContentBlock = ({ heading, body, imageUrl, reverse = false }: ContentBlock
               isVisible ? 'opacity-100 translate-x-0' : `opacity-0 ${reverse ? 'translate-x-10' : '-translate-x-10'}`
             } ${reverse ? 'lg:order-2' : ''}`}
           >
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground leading-tight hover:text-primary transition-colors duration-300">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-black mb-8 gradient-text text-glow font-title">
               {heading}
             </h2>
             <div className="w-20 h-1 bg-primary rounded-full" />
-      <div className="text-base sm:text-lg md:text-xl text-foreground/90 leading-relaxed whitespace-pre-line font-medium">
-        {body}
-      </div>
+            <div className="text-lg sm:text-xl text-muted-foreground leading-relaxed font-varela">
+              {typeof body === 'string' ? <p className="whitespace-pre-line">{body}</p> : body}
+            </div>
           </div>
 
           {/* Image */}

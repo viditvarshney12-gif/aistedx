@@ -20,8 +20,11 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ['Montserrat', 'sans-serif'],
-        body: ['Poppins', 'sans-serif'],
+        sans: ['Red Hat Display', 'sans-serif'],
+        heading: ['Orbitron', 'sans-serif'],
+        mono: ['Space Mono', 'monospace'],
+        title: ['Bebas Neue', 'cursive'],
+        varela: ['Varela Round', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
