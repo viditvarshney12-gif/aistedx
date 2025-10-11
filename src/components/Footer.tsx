@@ -70,6 +70,9 @@ const Footer = () => {
           <p className="text-muted-foreground text-xs sm:text-sm">
             © {new Date().getFullYear()} TEDxAhlconIntlSchool. This independent TEDx event is operated under license from TED.
           </p>
+          <p className="text-xs text-muted-foreground/70 mt-2">
+            Made by Vidit Varshney XII-A
+          </p>
         </div>
       </div>
     </footer>

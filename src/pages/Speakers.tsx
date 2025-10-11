@@ -45,7 +45,7 @@ const Speakers = () => {
                 <FuzzyText className="gradient-text">Coming Soon</FuzzyText>
               </h2>
               <div className="w-24 h-1 bg-primary rounded-full mx-auto mb-8 sm:mb-10" />
-              <div className="bg-card/50 backdrop-blur-sm border border-primary/20 rounded-2xl p-8 sm:p-10 hover-lift">
+              <div className="bg-card/50 backdrop-blur-sm border-2 border-primary/30 rounded-2xl p-8 sm:p-10 hover-lift shadow-lg">
                 <p className="text-muted-foreground text-lg sm:text-xl md:text-2xl leading-relaxed mb-8 font-varela">
                   We're excited to announce our incredible lineup of speakers soon. Stay tuned for updates on the inspiring voices that will be sharing their ideas worth spreading at TEDxAhlconIntlSchool.
                 </p>
@@ -56,7 +56,7 @@ const Speakers = () => {
                     rel="noopener noreferrer"
                     className="inline-block px-10 py-5 text-xl font-bold bg-gradient-to-r from-primary to-primary-glow text-white rounded-full hover:shadow-2xl hover:shadow-primary/60 transition-all duration-300 cursor-hover hover:scale-110 font-heading"
                   >
-                    Follow us on Social Media
+                    Follow us on Social Media for updates
                   </a>
                 </div>
               </div>

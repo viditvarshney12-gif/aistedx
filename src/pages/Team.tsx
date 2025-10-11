@@ -45,15 +45,20 @@ const Team = () => {
                 <FuzzyText className="gradient-text">Coming Soon</FuzzyText>
               </h2>
               <div className="w-24 h-1 bg-primary rounded-full mx-auto mb-8 sm:mb-10" />
-              <div className="bg-card/50 backdrop-blur-sm border border-primary/20 rounded-2xl p-8 sm:p-10 hover-lift">
-                <p className="text-muted-foreground text-lg sm:text-xl md:text-2xl leading-relaxed">
+              <div className="bg-card/50 backdrop-blur-sm border-2 border-primary/30 rounded-2xl p-8 sm:p-10 hover-lift shadow-lg">
+                <p className="text-muted-foreground text-lg sm:text-xl md:text-2xl leading-relaxed font-varela mb-8">
                   Meet the passionate individuals behind TEDxAhlconIntlSchool. Our team information will be revealed soon. 
                   Stay tuned to discover the dedicated organizers making this event possible!
                 </p>
-                <div className="mt-8 pt-8 border-t border-primary/20">
-                  <p className="text-primary text-base sm:text-lg font-semibold">
-                    Building something amazing together ✨
-                  </p>
+                <div className="pt-6">
+                  <a 
+                    href="https://www.instagram.com/tedxahlconintlschool/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-block px-10 py-5 text-xl font-bold bg-gradient-to-r from-primary to-primary-glow text-white rounded-full hover:shadow-2xl hover:shadow-primary/60 transition-all duration-300 cursor-hover hover:scale-110 font-heading"
+                  >
+                    Follow us on Social Media for updates
+                  </a>
                 </div>
               </div>
             </div>
