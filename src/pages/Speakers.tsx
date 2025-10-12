@@ -49,15 +49,17 @@ const Speakers = () => {
                 <p className="text-muted-foreground text-lg sm:text-xl md:text-2xl leading-relaxed mb-8 font-varela">
                   We're excited to announce our incredible lineup of speakers soon. Stay tuned for updates on the inspiring voices that will be sharing their ideas worth spreading at TEDxAhlconIntlSchool.
                 </p>
-                <div className="pt-6">
-                  <a 
-                    href="https://www.instagram.com/tedxahlconintlschool/" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="inline-block px-10 py-5 text-xl font-bold bg-gradient-to-r from-primary to-primary-glow text-white rounded-full hover:shadow-2xl hover:shadow-primary/60 transition-all duration-300 cursor-hover hover:scale-110 font-heading"
-                  >
-                    Follow us on Social Media for updates
-                  </a>
+                <div className="pt-8">
+                  <div className="inline-block border border-white/20 rounded-2xl px-8 py-6">
+                    <a 
+                      href="https://www.instagram.com/tedxahlconintlschool/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-primary text-xl sm:text-2xl font-bold font-varela hover:text-primary-glow transition-colors duration-300"
+                    >
+                      Follow us on Social Media
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>

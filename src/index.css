@@ -146,3 +146,23 @@ All colors MUST be HSL.
 .animate-fuzzy {
   animation: fuzzy 2s ease-in-out infinite;
 }
+
+@keyframes spark-fade {
+  0% { 
+    opacity: 1; 
+    transform: translateY(0) scale(1);
+  }
+  100% { 
+    opacity: 0; 
+    transform: translateY(-40px) scale(0);
+  }
+}
+
+.animate-spark-fade {
+  animation: spark-fade 0.6s ease-out forwards;
+}
+
+@keyframes ray-pulse {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 0.4; }
+}

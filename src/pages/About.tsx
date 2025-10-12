@@ -37,16 +37,16 @@ const About = () => {
           <ScrollReveal>
             <div className="bg-gradient-to-br from-card/90 to-card/50 backdrop-blur-lg border-2 border-primary/50 rounded-3xl p-10 sm:p-12 md:p-14 shadow-2xl hover:shadow-primary/50 transition-all duration-500">
               <div className="text-center space-y-8">
-                <h2 className="text-5xl sm:text-6xl md:text-7xl font-black mb-8">
-                  <ShinyText className="gradient-text text-glow-strong">Event Details</ShinyText>
+                <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-8 text-glow-strong">
+                  <ShinyText className="text-white">Event Details</ShinyText>
                 </h2>
                 <div className="space-y-6">
-                  <div className="flex items-center justify-center gap-4 text-3xl sm:text-4xl md:text-5xl font-black text-primary font-heading text-glow">
-                    <span className="text-5xl">📅</span>
+                  <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white font-varela">
+                    <span className="text-4xl sm:text-5xl">📅</span>
                     <DecryptText>November 1st, 2025 | 9:00 AM IST</DecryptText>
                   </div>
-                  <div className="flex items-center justify-center gap-4 text-3xl sm:text-4xl md:text-5xl font-black text-primary font-heading text-glow">
-                    <span className="text-5xl">📍</span>
+                  <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white font-varela">
+                    <span className="text-4xl sm:text-5xl">📍</span>
                     <DecryptText>Ahlcon International School, Mayur Vihar Phase 1, Delhi</DecryptText>
                   </div>
                 </div>
