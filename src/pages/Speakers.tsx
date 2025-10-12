@@ -4,7 +4,7 @@ import CustomCursor from "@/components/CustomCursor";
 import FuzzyText from "@/components/effects/FuzzyText";
 import ScrollReveal from "@/components/effects/ScrollReveal";
 import ScrollFloat from "@/components/effects/ScrollFloat";
-import eventPerformance from "@/assets/event-performance.jpg";
+import speakersBg from "@/assets/speakers-bg.png";
 
 const Speakers = () => {
   return (
@@ -16,7 +16,7 @@ const Speakers = () => {
       <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src={eventPerformance}
+            src={speakersBg}
             alt="Our Speakers"
             className="w-full h-full object-cover"
           />
@@ -24,7 +24,7 @@ const Speakers = () => {
         </div>
         <div className="relative z-10 container mx-auto px-4 text-center">
           <ScrollFloat>
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold gradient-text mb-6">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-foreground text-glow-strong mb-6">
               Our Speakers
             </h1>
           </ScrollFloat>
@@ -42,21 +42,22 @@ const Speakers = () => {
                 </div>
               </div>
               <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 sm:mb-12">
-                <FuzzyText className="gradient-text">Coming Soon</FuzzyText>
+                <FuzzyText className="text-foreground text-glow-strong">Coming Soon</FuzzyText>
               </h2>
-              <div className="w-24 h-1 bg-primary rounded-full mx-auto mb-8 sm:mb-10" />
+              <div className="w-24 h-1 bg-foreground/20 rounded-full mx-auto mb-8 sm:mb-10" />
               <div className="bg-card/50 backdrop-blur-sm border-2 border-primary/30 rounded-2xl p-8 sm:p-10 hover-lift shadow-lg">
                 <p className="text-muted-foreground text-lg sm:text-xl md:text-2xl leading-relaxed mb-8 font-varela">
                   We're excited to announce our incredible lineup of speakers soon. Stay tuned for updates on the inspiring voices that will be sharing their ideas worth spreading at TEDxAhlconIntlSchool.
                 </p>
-                <div className="pt-6">
+                <div className="pt-6 border-t border-foreground/10">
                   <a 
                     href="https://www.instagram.com/tedxahlconintlschool/" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="inline-block px-10 py-5 text-xl font-bold bg-gradient-to-r from-primary to-primary-glow text-white rounded-full hover:shadow-2xl hover:shadow-primary/60 transition-all duration-300 cursor-hover hover:scale-110 font-heading"
+                    className="inline-block text-xl font-varela text-primary hover:text-primary-glow transition-colors duration-300 cursor-hover relative group"
                   >
                     Follow us on Social Media for updates
+                    <span className="absolute bottom-0 left-0 w-full h-0.5 bg-foreground/20 transform origin-left transition-transform duration-300" />
                   </a>
                 </div>
               </div>

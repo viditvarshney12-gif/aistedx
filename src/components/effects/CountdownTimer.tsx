@@ -36,10 +36,10 @@ const CountdownTimer = ({ targetDate, className = '' }: CountdownTimerProps) => 
 
   const TimeUnit = ({ value, label }: { value: number; label: string }) => (
     <div className="flex flex-col items-center bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-md border-2 border-primary/30 rounded-3xl p-8 sm:p-10 md:p-12 hover:border-primary/50 transition-all duration-500 shadow-lg hover:shadow-primary/20">
-      <div className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black font-title gradient-text text-glow mb-4">
+      <div className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black font-title text-foreground text-glow mb-4">
         {value.toString().padStart(2, '0')}
       </div>
-      <div className="text-base sm:text-lg md:text-xl text-primary/90 font-bold font-heading uppercase tracking-[0.3em]">
+      <div className="text-base sm:text-lg md:text-xl text-foreground/90 font-bold font-heading uppercase tracking-[0.3em]">
         {label}
       </div>
     </div>

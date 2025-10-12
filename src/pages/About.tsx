@@ -19,14 +19,14 @@ const About = () => {
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${musicalPerformance})` }}
+          style={{ backgroundImage: `url(${culturalDance})` }}
         >
           <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/70 to-background" />
         </div>
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-6">
-            <ShinyText className="gradient-text text-glow-strong">About Us</ShinyText>
+            <ShinyText className="text-foreground text-glow-strong">About Us</ShinyText>
           </h1>
         </div>
       </section>
@@ -38,16 +38,16 @@ const About = () => {
             <div className="bg-gradient-to-br from-card/90 to-card/50 backdrop-blur-lg border-2 border-primary/50 rounded-3xl p-10 sm:p-12 md:p-14 shadow-2xl hover:shadow-primary/50 transition-all duration-500">
               <div className="text-center space-y-8">
                 <h2 className="text-5xl sm:text-6xl md:text-7xl font-black mb-8">
-                  <ShinyText className="gradient-text text-glow-strong">Event Details</ShinyText>
+                  <ShinyText className="text-foreground text-glow-strong">Event Details</ShinyText>
                 </h2>
                 <div className="space-y-6">
-                  <div className="flex items-center justify-center gap-4 text-3xl sm:text-4xl md:text-5xl font-black text-primary font-heading text-glow">
-                    <span className="text-5xl">📅</span>
-                    <DecryptText>November 1st, 2025 | 9:00 AM IST</DecryptText>
+                  <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-2xl sm:text-3xl md:text-4xl font-black text-foreground font-heading text-glow">
+                    <span className="text-4xl sm:text-5xl">📅</span>
+                    <span className="text-center sm:text-left">November 1st, 2025 | 9:00 AM IST</span>
                   </div>
-                  <div className="flex items-center justify-center gap-4 text-3xl sm:text-4xl md:text-5xl font-black text-primary font-heading text-glow">
-                    <span className="text-5xl">📍</span>
-                    <DecryptText>Ahlcon International School, Mayur Vihar Phase 1, Delhi</DecryptText>
+                  <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-2xl sm:text-3xl md:text-4xl font-black text-foreground font-heading text-glow">
+                    <span className="text-4xl sm:text-5xl">📍</span>
+                    <span className="text-center sm:text-left">Ahlcon International School, Mayur Vihar Phase 1, Delhi</span>
                   </div>
                 </div>
               </div>
@@ -62,17 +62,23 @@ const About = () => {
           <ScrollReveal>
             <div className="mb-16">
               <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-center mb-12">
-                <ShinyText className="gradient-text text-glow-strong">Our Theme</ShinyText>
+                <ShinyText className="text-foreground text-glow-strong">Our Theme</ShinyText>
               </h2>
               <div className="bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-md border-2 border-primary/30 rounded-2xl p-10 sm:p-12 hover-lift shadow-lg relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent pointer-events-none" />
                 <div className="relative z-10">
-                  <h3 className="text-3xl sm:text-4xl md:text-5xl font-black mb-8 text-center gradient-text text-glow font-title">
+                  <h3 className="text-3xl sm:text-4xl md:text-5xl font-black mb-8 text-center text-foreground text-glow font-title">
                     Afterglow: Light that Outlives the Flame
                   </h3>
                   <div className="grid md:grid-cols-2 gap-6 mb-8">
-                    <img src={culturalDance} alt="Cultural Performance" className="w-full h-64 object-cover rounded-xl shadow-lg" />
-                    <img src={acrobaticPerformance} alt="Acrobatic Performance" className="w-full h-64 object-cover rounded-xl shadow-lg" />
+                    <div className="relative group overflow-hidden rounded-xl">
+                      <img src={musicalPerformance} alt="Musical Performance" className="w-full h-64 object-cover rounded-xl shadow-lg transition-transform duration-500 group-hover:scale-110" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    </div>
+                    <div className="relative group overflow-hidden rounded-xl">
+                      <img src={acrobaticPerformance} alt="Acrobatic Performance" className="w-full h-64 object-cover rounded-xl shadow-lg transition-transform duration-500 group-hover:scale-110" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    </div>
                   </div>
                   <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed mb-6 font-varela">
                     An afterglow is the light that remains after the source has faded—a lasting impression, an echo of brilliance. 
@@ -96,7 +102,7 @@ const About = () => {
           <ScrollReveal>
             <div className="bg-card/50 backdrop-blur-sm border-2 border-primary/30 rounded-3xl p-8 sm:p-12 hover:border-primary/40 transition-all duration-300 shadow-lg">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-8 text-center">
-                <ShinyText className="gradient-text text-glow">About TED</ShinyText>
+                <ShinyText className="text-foreground text-glow">About TED</ShinyText>
               </h2>
               <div className="prose prose-lg prose-invert max-w-none space-y-6">
                 <p className="text-base sm:text-lg text-muted-foreground leading-relaxed font-varela">
@@ -120,7 +126,7 @@ const About = () => {
           <ScrollReveal>
             <div className="bg-card/50 backdrop-blur-sm border-2 border-primary/30 rounded-3xl p-8 sm:p-12 hover:border-primary/40 transition-all duration-300 shadow-lg">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-8 text-center">
-                <ShinyText className="gradient-text text-glow">About TEDx</ShinyText>
+                <ShinyText className="text-foreground text-glow">About TEDx</ShinyText>
               </h2>
               <p className="text-base sm:text-lg text-muted-foreground leading-relaxed font-varela">
                 In the spirit of discovering and spreading ideas, TEDx is a program of local, self-organized events that bring people together to share a TED-like experience. At a TEDx event, TED Talks video and live speakers combine to spark deep discussion and connection. These local, self-organized events are branded TEDx, where x = independently organized TED event. The TED Conference provides general guidance for the TEDx program, but individual TEDx events are self-organized (subject to certain rules and regulations).
