@@ -8,6 +8,8 @@ import { Calendar, MapPin } from "lucide-react";
 import musicalPerformance from "@/assets/musical-performance.jpg";
 import culturalDance from "@/assets/cultural-dance.jpg";
 import acrobaticPerformance from "@/assets/acrobatic-performance.jpg";
+import performancePhoto from "@/assets/performance-photo.jpg";
+import stagePhoto from "@/assets/stage-photo.png";
 
 const About = () => {
   return (
@@ -33,20 +35,20 @@ const About = () => {
 
       {/* Event Details - Prominent at Top */}
       <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-card/30 -mt-20 relative z-20">
-        <div className="container mx-auto max-w-5xl">
+        <div className="container mx-auto max-w-4xl">
           <ScrollReveal>
-            <div className="bg-gradient-to-br from-card/90 to-card/50 backdrop-blur-lg border-2 border-primary/50 rounded-3xl p-10 sm:p-12 md:p-14 shadow-2xl hover:shadow-primary/50 transition-all duration-500">
-              <div className="text-center space-y-8">
-                <h2 className="text-4xl sm:text-5xl md:text-6xl font-black mb-8">
+            <div className="bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-md border border-primary/30 rounded-2xl p-8 sm:p-10 shadow-xl hover:shadow-primary/30 transition-all duration-500 hover:border-primary/50">
+              <div className="text-center space-y-6">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-6">
                   <ShinyText className="text-foreground text-glow-strong">Event Details</ShinyText>
                 </h2>
-                <div className="space-y-6 text-justify max-w-3xl mx-auto">
-                  <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-lg sm:text-xl font-varela text-foreground">
-                    <span className="text-3xl sm:text-4xl">📅</span>
+                <div className="space-y-4 max-w-2xl mx-auto">
+                  <div className="flex flex-col sm:flex-row items-center justify-center gap-3 text-base sm:text-lg font-varela text-foreground">
+                    <span className="text-2xl sm:text-3xl">📅</span>
                     <span className="text-center sm:text-left">November 1st, 2025 | 9:00 AM IST</span>
                   </div>
-                  <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-lg sm:text-xl font-varela text-foreground">
-                    <span className="text-3xl sm:text-4xl">📍</span>
+                  <div className="flex flex-col sm:flex-row items-center justify-center gap-3 text-base sm:text-lg font-varela text-foreground">
+                    <span className="text-2xl sm:text-3xl">📍</span>
                     <span className="text-center sm:text-left">Ahlcon International School, Mayur Vihar Phase 1, Delhi</span>
                   </div>
                 </div>
@@ -88,22 +90,45 @@ const About = () => {
 
       {/* About TED Section */}
       <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-card/20 to-background">
-        <div className="container mx-auto max-w-5xl">
+        <div className="container mx-auto max-w-6xl">
           <ScrollReveal>
-            <div className="bg-card/50 backdrop-blur-sm border-2 border-primary/30 rounded-3xl p-8 sm:p-12 hover:border-primary/40 transition-all duration-300 shadow-lg">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-8 text-center">
-                <ShinyText className="text-foreground text-glow">About TED</ShinyText>
-              </h2>
-              <div className="prose prose-lg prose-invert max-w-none space-y-6">
-                <p className="text-base sm:text-lg text-muted-foreground leading-relaxed font-varela">
-                  TED is a nonprofit, nonpartisan organization dedicated to discovering, debating and spreading ideas that spark conversation, deepen understanding and drive meaningful change. Our organization is devoted to curiosity, reason, wonder and the pursuit of knowledge — without an agenda. We welcome people from every discipline and culture who seek a deeper understanding of the world and connection with others, and we invite everyone to engage with ideas and activate them in your community.
-                </p>
-                <p className="text-base sm:text-lg text-muted-foreground leading-relaxed font-varela">
-                  TED began in 1984 as a conference where Technology, Entertainment and Design converged, but today it spans a multitude of worldwide communities and initiatives exploring everything from science and business to education, arts and global issues. In addition to the TED Talks curated from our annual conferences and published on TED.com, we produce original podcasts, short video series, animated educational lessons (TED-Ed) and TV programs that are translated into more than 100 languages and distributed via partnerships around the world.
-                </p>
-                <p className="text-base sm:text-lg text-muted-foreground leading-relaxed font-varela">
-                  Each year, thousands of independently run TEDx events bring people together to share ideas and bridge divides in communities on every continent. Through the Audacious Project, TED has helped catalyze more than $3 billion in funding for projects that seek to make the world more beautiful, sustainable and just.
-                </p>
+            <div className="grid md:grid-cols-2 gap-8 items-center mb-16">
+              <div className="bg-card/50 backdrop-blur-sm border-2 border-primary/30 rounded-3xl p-8 sm:p-10 hover:border-primary/40 transition-all duration-300 shadow-lg">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-6">
+                  <ShinyText className="text-foreground text-glow">About TED</ShinyText>
+                </h2>
+                <div className="space-y-4">
+                  <p className="text-base sm:text-lg text-muted-foreground leading-relaxed font-varela text-justify">
+                    TED is a nonprofit, nonpartisan organization dedicated to discovering, debating and spreading ideas that spark conversation, deepen understanding and drive meaningful change. Our organization is devoted to curiosity, reason, wonder and the pursuit of knowledge — without an agenda.
+                  </p>
+                  <p className="text-base sm:text-lg text-muted-foreground leading-relaxed font-varela text-justify">
+                    We welcome people from every discipline and culture who seek a deeper understanding of the world and connection with others, and we invite everyone to engage with ideas and activate them in your community.
+                  </p>
+                </div>
+              </div>
+              <div className="rounded-3xl overflow-hidden shadow-2xl hover:shadow-primary/30 transition-all duration-500 border-2 border-primary/20 hover:border-primary/40">
+                <img src={stagePhoto} alt="TEDx Stage" className="w-full h-full object-cover" />
+              </div>
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal>
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div className="rounded-3xl overflow-hidden shadow-2xl hover:shadow-primary/30 transition-all duration-500 border-2 border-primary/20 hover:border-primary/40 order-2 md:order-1">
+                <img src={performancePhoto} alt="TEDx Performance" className="w-full h-full object-cover" />
+              </div>
+              <div className="bg-card/50 backdrop-blur-sm border-2 border-primary/30 rounded-3xl p-8 sm:p-10 hover:border-primary/40 transition-all duration-300 shadow-lg order-1 md:order-2">
+                <div className="space-y-4">
+                  <p className="text-base sm:text-lg text-muted-foreground leading-relaxed font-varela text-justify">
+                    TED began in 1984 as a conference where Technology, Entertainment and Design converged, but today it spans a multitude of worldwide communities and initiatives exploring everything from science and business to education, arts and global issues.
+                  </p>
+                  <p className="text-base sm:text-lg text-muted-foreground leading-relaxed font-varela text-justify">
+                    In addition to the TED Talks curated from our annual conferences and published on TED.com, we produce original podcasts, short video series, animated educational lessons (TED-Ed) and TV programs that are translated into more than 100 languages and distributed via partnerships around the world.
+                  </p>
+                  <p className="text-base sm:text-lg text-muted-foreground leading-relaxed font-varela text-justify">
+                    Each year, thousands of independently run TEDx events bring people together to share ideas and bridge divides in communities on every continent. Through the Audacious Project, TED has helped catalyze more than $3 billion in funding for projects that seek to make the world more beautiful, sustainable and just.
+                  </p>
+                </div>
               </div>
             </div>
           </ScrollReveal>
