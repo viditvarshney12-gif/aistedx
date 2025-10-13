@@ -32,7 +32,6 @@ const Home = () => {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${heroBackground})` }}
         />
-        <div className="absolute inset-0 bg-black/20" />
 
         {/* Content */}
         <div className="relative z-10 container mx-auto px-4 text-center">

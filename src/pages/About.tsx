@@ -43,11 +43,11 @@ const About = () => {
                   <ShinyText className="text-foreground text-glow-strong">Event Details</ShinyText>
                 </h2>
                 <div className="space-y-4 max-w-2xl mx-auto">
-                  <div className="flex flex-col sm:flex-row items-center justify-center gap-3 text-base sm:text-lg font-varela text-foreground">
+                  <div className="flex flex-col sm:flex-row items-center justify-center gap-3 text-lg sm:text-xl font-varela text-foreground">
                     <span className="text-2xl sm:text-3xl">📅</span>
                     <span className="text-center sm:text-left">November 1st, 2025 | 9:00 AM IST</span>
                   </div>
-                  <div className="flex flex-col sm:flex-row items-center justify-center gap-3 text-base sm:text-lg font-varela text-foreground">
+                  <div className="flex flex-col sm:flex-row items-center justify-center gap-3 text-lg sm:text-xl font-varela text-foreground">
                     <span className="text-2xl sm:text-3xl">📍</span>
                     <span className="text-center sm:text-left">Ahlcon International School, Mayur Vihar Phase 1, Delhi</span>
                   </div>
@@ -125,9 +125,6 @@ const About = () => {
                   <p className="text-base sm:text-lg text-muted-foreground leading-relaxed font-varela text-justify">
                     In addition to the TED Talks curated from our annual conferences and published on TED.com, we produce original podcasts, short video series, animated educational lessons (TED-Ed) and TV programs that are translated into more than 100 languages and distributed via partnerships around the world.
                   </p>
-                  <p className="text-base sm:text-lg text-muted-foreground leading-relaxed font-varela text-justify">
-                    Each year, thousands of independently run TEDx events bring people together to share ideas and bridge divides in communities on every continent. Through the Audacious Project, TED has helped catalyze more than $3 billion in funding for projects that seek to make the world more beautiful, sustainable and just.
-                  </p>
                 </div>
               </div>
             </div>
@@ -143,9 +140,14 @@ const About = () => {
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-8 text-center">
                 <ShinyText className="text-foreground text-glow">About TEDx</ShinyText>
               </h2>
-              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed font-varela">
-                In the spirit of discovering and spreading ideas, TEDx is a program of local, self-organized events that bring people together to share a TED-like experience. At a TEDx event, TED Talks video and live speakers combine to spark deep discussion and connection. These local, self-organized events are branded TEDx, where x = independently organized TED event. The TED Conference provides general guidance for the TEDx program, but individual TEDx events are self-organized (subject to certain rules and regulations).
-              </p>
+              <div className="space-y-4">
+                <p className="text-base sm:text-lg text-muted-foreground leading-relaxed font-varela text-justify">
+                  In the spirit of discovering and spreading ideas, TEDx is a program of local, self-organized events that bring people together to share a TED-like experience. At a TEDx event, TED Talks video and live speakers combine to spark deep discussion and connection. These local, self-organized events are branded TEDx, where x = independently organized TED event. The TED Conference provides general guidance for the TEDx program, but individual TEDx events are self-organized (subject to certain rules and regulations).
+                </p>
+                <p className="text-base sm:text-lg text-muted-foreground leading-relaxed font-varela text-justify">
+                  Each year, thousands of independently run TEDx events bring people together to share ideas and bridge divides in communities on every continent. Through the Audacious Project, TED has helped catalyze more than $3 billion in funding for projects that seek to make the world more beautiful, sustainable and just.
+                </p>
+              </div>
             </div>
           </ScrollReveal>
         </div>
