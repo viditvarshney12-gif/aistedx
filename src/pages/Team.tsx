@@ -24,7 +24,7 @@ const Team = () => {
         </div>
         <div className="relative z-10 container mx-auto px-4 text-center">
           <ScrollFloat>
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold gradient-text mb-6">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-foreground text-glow-strong mb-6">
               The Team
             </h1>
           </ScrollFloat>
@@ -41,8 +41,8 @@ const Team = () => {
                   <span className="text-6xl sm:text-7xl relative z-10">👥</span>
                 </div>
               </div>
-              <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 sm:mb-12">
-                <FuzzyText className="gradient-text">Coming Soon</FuzzyText>
+              <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 sm:mb-12 text-foreground text-glow-strong">
+                Coming Soon
               </h2>
               <div className="w-24 h-1 bg-primary rounded-full mx-auto mb-8 sm:mb-10" />
               <div className="bg-card/50 backdrop-blur-sm border-2 border-primary/30 rounded-2xl p-8 sm:p-10 hover-lift shadow-lg">
@@ -50,14 +50,15 @@ const Team = () => {
                   Meet the passionate individuals behind TEDxAhlconIntlSchool. Our team information will be revealed soon. 
                   Stay tuned to discover the dedicated organizers making this event possible!
                 </p>
-                <div className="pt-6">
+                <div className="pt-6 border-t border-foreground/10">
                   <a 
                     href="https://www.instagram.com/tedxahlconintlschool/" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="inline-block px-10 py-5 text-xl font-bold bg-gradient-to-r from-primary to-primary-glow text-white rounded-full hover:shadow-2xl hover:shadow-primary/60 transition-all duration-300 cursor-hover hover:scale-110 font-heading"
+                    className="inline-block text-xl font-varela text-primary hover:text-primary-glow transition-colors duration-300 cursor-hover relative group"
                   >
                     Follow us on Social Media for updates
+                    <span className="absolute bottom-0 left-0 w-full h-0.5 bg-foreground/20 transform origin-left transition-transform duration-300" />
                   </a>
                 </div>
               </div>

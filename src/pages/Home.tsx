@@ -13,7 +13,7 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import mainLogo from "@/assets/main-logo.png";
 import whatIsTedx from "@/assets/what-is-tedx.jpg";
-import heroBackground from "@/assets/hero-background.jpg";
+import heroBackground from "@/assets/hero-banner.jpg";
 import afterglowLogo from "@/assets/afterglow-logo.png";
 import nobgLogo from "@/assets/nobg.png";
 
@@ -25,32 +25,32 @@ const Home = () => {
       <CustomCursor />
       <Navbar />
       
-      {/* Hero Section - Full Screen with Placeholder */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden bg-background">
-        {/* Placeholder background */}
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background/90" />
+      {/* Hero Section - Full Screen with Background Image */}
+      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${heroBackground})` }}
+        />
+        <div className="absolute inset-0 bg-black/20" />
 
         {/* Content */}
         <div className="relative z-10 container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="space-y-8"
+            className="pt-32"
           >
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight font-title">
-              <span className="block gradient-text text-glow-strong drop-shadow-2xl">
-                TEDxAhlconIntlSchool
-              </span>
-            </h1>
-            <p className="text-2xl sm:text-3xl md:text-4xl text-foreground font-light tracking-wide drop-shadow-lg font-varela">
-              Ideas Worth Spreading
-            </p>
-            <div className="pt-8">
-              <Button size="lg" className="text-xl px-12 py-7 rounded-full hover:scale-110 transition-all duration-300 cursor-hover bg-primary hover:bg-primary/90 text-white font-bold shadow-2xl shadow-primary/50 font-heading">
+            <a 
+              href="https://docs.google.com/forms/d/e/1FAIpQLSdkzkzO1tpNbt7-L6QMA7eW7tB745nKK0Sxcl0ByUpyaUnv4w/viewform?usp=dialog"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button size="lg" className="text-xl px-12 py-7 rounded-full hover:scale-110 transition-all duration-300 cursor-hover bg-white hover:bg-white/90 text-black font-bold shadow-2xl font-heading">
                 Buy Tickets
               </Button>
-            </div>
+            </a>
           </motion.div>
         </div>
       </section>
@@ -58,12 +58,22 @@ const Home = () => {
       {/* Theme Section - Afterglow */}
       <ScrollReveal>
         <section className="py-24 px-4 bg-gradient-to-b from-background to-background/50">
-          <div className="container mx-auto max-w-5xl text-center">
+          <div className="container mx-auto max-w-5xl text-center space-y-8">
             <ScrollFloat offset={30}>
-              <div className="flex justify-center">
+              <div className="flex justify-center mb-8">
                 <img src={afterglowLogo} alt="Afterglow" className="w-full max-w-2xl h-auto" />
               </div>
             </ScrollFloat>
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto font-varela leading-relaxed">
+              Afterglow represents the lasting radiance of ideas that continue to inspire and illuminate long after their initial spark. Join us as we explore the enduring impact of transformative thoughts.
+            </p>
+            <div className="pt-4">
+              <a href="/about">
+                <Button size="lg" className="text-lg px-10 py-6 rounded-full hover:scale-110 transition-all duration-300 cursor-hover bg-primary hover:bg-primary/90 text-white font-bold shadow-xl font-heading">
+                  Learn More
+                </Button>
+              </a>
+            </div>
           </div>
         </section>
       </ScrollReveal>
@@ -82,19 +92,6 @@ const Home = () => {
         </section>
       </ScrollReveal>
 
-      {/* Speakers Gallery */}
-      <ScrollReveal>
-        <section className="py-28 px-4 bg-gradient-to-b from-background to-background/50">
-          <div className="container mx-auto text-center">
-            <ScrollFloat offset={50}>
-              <h2 className="text-5xl sm:text-6xl md:text-7xl font-black mb-20 text-glow-strong font-title text-foreground">
-                Our Speakers
-              </h2>
-            </ScrollFloat>
-            <CircularGallery />
-          </div>
-        </section>
-      </ScrollReveal>
 
       {/* TEDx is Section */}
       <ScrollReveal>

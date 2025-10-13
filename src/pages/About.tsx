@@ -37,16 +37,16 @@ const About = () => {
           <ScrollReveal>
             <div className="bg-gradient-to-br from-card/90 to-card/50 backdrop-blur-lg border-2 border-primary/50 rounded-3xl p-10 sm:p-12 md:p-14 shadow-2xl hover:shadow-primary/50 transition-all duration-500">
               <div className="text-center space-y-8">
-                <h2 className="text-5xl sm:text-6xl md:text-7xl font-black mb-8">
+                <h2 className="text-4xl sm:text-5xl md:text-6xl font-black mb-8">
                   <ShinyText className="text-foreground text-glow-strong">Event Details</ShinyText>
                 </h2>
-                <div className="space-y-6">
-                  <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-2xl sm:text-3xl md:text-4xl font-black text-foreground font-heading text-glow">
-                    <span className="text-4xl sm:text-5xl">📅</span>
+                <div className="space-y-6 text-justify max-w-3xl mx-auto">
+                  <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-lg sm:text-xl font-varela text-foreground">
+                    <span className="text-3xl sm:text-4xl">📅</span>
                     <span className="text-center sm:text-left">November 1st, 2025 | 9:00 AM IST</span>
                   </div>
-                  <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-2xl sm:text-3xl md:text-4xl font-black text-foreground font-heading text-glow">
-                    <span className="text-4xl sm:text-5xl">📍</span>
+                  <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-lg sm:text-xl font-varela text-foreground">
+                    <span className="text-3xl sm:text-4xl">📍</span>
                     <span className="text-center sm:text-left">Ahlcon International School, Mayur Vihar Phase 1, Delhi</span>
                   </div>
                 </div>
@@ -70,21 +70,11 @@ const About = () => {
                   <h3 className="text-3xl sm:text-4xl md:text-5xl font-black mb-8 text-center text-foreground text-glow font-title">
                     Afterglow: Light that Outlives the Flame
                   </h3>
-                  <div className="grid md:grid-cols-2 gap-6 mb-8">
-                    <div className="relative group overflow-hidden rounded-xl">
-                      <img src={musicalPerformance} alt="Musical Performance" className="w-full h-64 object-cover rounded-xl shadow-lg transition-transform duration-500 group-hover:scale-110" />
-                      <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    </div>
-                    <div className="relative group overflow-hidden rounded-xl">
-                      <img src={acrobaticPerformance} alt="Acrobatic Performance" className="w-full h-64 object-cover rounded-xl shadow-lg transition-transform duration-500 group-hover:scale-110" />
-                      <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    </div>
-                  </div>
-                  <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed mb-6 font-varela">
+                  <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed mb-6 font-varela text-justify">
                     An afterglow is the light that remains after the source has faded—a lasting impression, an echo of brilliance. 
                     It's the warmth that lingers after a fire, the glow that follows a sunset, and the impact that outlasts a moment.
                   </p>
-                  <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed font-varela">
+                  <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed font-varela text-justify">
                     At TEDxAhlconIntlSchool, we celebrate ideas that endure. The conversations we spark, the perspectives we challenge, 
                     and the connections we forge continue to resonate long after the event ends. Join us as we explore the lasting 
                     impact of transformative ideas.

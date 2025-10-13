@@ -41,8 +41,8 @@ const Speakers = () => {
                   <span className="text-6xl sm:text-7xl relative z-10">🎤</span>
                 </div>
               </div>
-              <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 sm:mb-12">
-                <FuzzyText className="text-foreground text-glow-strong">Coming Soon</FuzzyText>
+              <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 sm:mb-12 text-foreground text-glow-strong">
+                Coming Soon
               </h2>
               <div className="w-24 h-1 bg-foreground/20 rounded-full mx-auto mb-8 sm:mb-10" />
               <div className="bg-card/50 backdrop-blur-sm border-2 border-primary/30 rounded-2xl p-8 sm:p-10 hover-lift shadow-lg">
