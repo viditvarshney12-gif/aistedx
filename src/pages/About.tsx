@@ -27,7 +27,7 @@ const About = () => {
         </div>
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-6 font-coolvetica">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-6 font-aller">
             <ShinyText className="text-foreground text-glow-strong">About Us</ShinyText>
           </h1>
         </div>
@@ -38,14 +38,11 @@ const About = () => {
         <div className="container mx-auto max-w-5xl">
           <ScrollReveal>
             <div className="mb-16">
-              <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-center mb-12 font-coolvetica">
-                <ShinyText className="text-foreground text-glow-strong">Our Theme</ShinyText>
-              </h2>
               <div className="bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-md border-2 border-primary/30 rounded-2xl p-10 sm:p-12 hover-lift shadow-lg relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent pointer-events-none" />
                 <div className="relative z-10">
-                  <h3 className="text-3xl sm:text-4xl md:text-5xl font-black mb-8 text-center text-foreground text-glow font-coolvetica">
-                    Afterglow : Light that Outlives the Flame
+                  <h3 className="text-3xl sm:text-4xl md:text-5xl font-black mb-8 text-center text-foreground font-coolvetica">
+                    <ShinyText className="text-glow">Afterglow : Light that Outlives the Flame</ShinyText>
                   </h3>
                   <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed mb-6 font-varela text-justify">
                     An afterglow is the light that remains after the source has faded : a lasting impression, an echo of brilliance.
@@ -69,7 +66,7 @@ const About = () => {
           <ScrollReveal>
             <div className="grid md:grid-cols-2 gap-8 items-center mb-16">
               <div className="bg-card/50 backdrop-blur-sm border-2 border-primary/30 rounded-3xl p-8 sm:p-10 hover:border-primary/40 transition-all duration-300 shadow-lg">
-                <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-6 font-coolvetica">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-6 font-aller">
                   <ShinyText className="text-foreground text-glow">About TED</ShinyText>
                 </h2>
                 <div className="space-y-4">
@@ -112,7 +109,7 @@ const About = () => {
         <div className="container mx-auto max-w-5xl">
           <ScrollReveal>
             <div className="bg-card/50 backdrop-blur-sm border-2 border-primary/30 rounded-3xl p-8 sm:p-12 hover:border-primary/40 transition-all duration-300 shadow-lg">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-8 text-center font-coolvetica">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-8 text-center font-aller">
                 <ShinyText className="text-foreground text-glow">About TEDx</ShinyText>
               </h2>
               <div className="space-y-4">

@@ -39,15 +39,15 @@ const Home = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="pt-56 sm:pt-64 md:pt-72"
+            className="pt-64 sm:pt-72 md:pt-80 lg:pt-96"
           >
             <a 
               href="https://docs.google.com/forms/d/e/1FAIpQLSdkzkzO1tpNbt7-L6QMA7eW7tB745nKK0Sxcl0ByUpyaUnv4w/viewform?usp=dialog"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button size="lg" className="text-2xl px-14 py-8 rounded-full hover:scale-110 transition-all duration-300 cursor-hover bg-white hover:bg-white/90 text-black font-bold shadow-2xl font-coolvetica tracking-wide">
-                Buy Tickets
+              <Button size="lg" className="text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 rounded-full hover:scale-110 transition-all duration-300 cursor-hover bg-white hover:bg-white/90 text-black font-bold shadow-xl font-heading">
+                Pre-Book Now
               </Button>
             </a>
           </motion.div>
@@ -56,24 +56,19 @@ const Home = () => {
 
       {/* Theme Section - About Theme */}
       <ScrollReveal>
-        <section className="py-24 px-4 bg-gradient-to-b from-background to-background/50">
-          <div className="container mx-auto max-w-5xl text-center space-y-8">
+        <section className="py-16 sm:py-20 md:py-24 px-4 bg-gradient-to-b from-background to-background/50">
+          <div className="container mx-auto max-w-5xl text-center space-y-6 sm:space-y-8">
             <ScrollFloat offset={30}>
-              <h2 className="text-5xl sm:text-6xl md:text-7xl font-black mb-12 text-glow-strong font-coolvetica text-foreground">
-                About Theme
-              </h2>
-            </ScrollFloat>
-            <ScrollFloat offset={30}>
-              <div className="flex justify-center mb-8">
-                <img src={afterglowLogo} alt="Afterglow" className="w-full max-w-2xl h-auto" />
+              <div className="flex justify-center mb-6 sm:mb-8">
+                <img src={afterglowLogo} alt="Afterglow" className="w-full max-w-xl sm:max-w-2xl h-auto" />
               </div>
             </ScrollFloat>
-            <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto font-varela leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto font-varela leading-relaxed px-4">
               Afterglow represents the lasting radiance of ideas that continue to inspire and illuminate long after their initial spark. Join us as we explore the enduring impact of transformative thoughts.
             </p>
             <div className="pt-4">
               <a href="/about">
-                <Button size="lg" className="text-lg px-10 py-6 rounded-full hover:scale-110 transition-all duration-300 cursor-hover bg-primary hover:bg-primary/90 text-white font-bold shadow-xl font-heading">
+                <Button size="lg" className="text-base sm:text-lg px-8 sm:px-10 py-5 sm:py-6 rounded-full hover:scale-110 transition-all duration-300 cursor-hover bg-primary hover:bg-primary/90 text-white font-bold shadow-xl font-heading">
                   Learn More
                 </Button>
               </a>
@@ -84,10 +79,10 @@ const Home = () => {
 
       {/* TEDx is Section */}
       <ScrollReveal>
-        <section className="py-28 px-4 bg-gradient-to-b from-background/50 to-background">
+        <section className="py-20 sm:py-24 md:py-28 px-4 bg-gradient-to-b from-background/50 to-background">
           <div className="container mx-auto text-center max-w-6xl">
             <ScrollFloat offset={35}>
-              <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-12 font-coolvetica text-foreground text-glow-strong">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black mb-8 sm:mb-12 font-aller text-foreground text-glow-strong px-4">
                 TEDxAhlconIntlSchool is{' '}
                 <RotatingText
                   words={['Back', 'Bigger', 'Better', 'Bolder']}
@@ -101,20 +96,24 @@ const Home = () => {
 
       {/* Event Details Box */}
       <ScrollReveal>
-        <section className="py-20 px-4 bg-gradient-to-b from-background to-card/30">
+        <section className="py-16 sm:py-20 px-4 bg-gradient-to-b from-background to-card/30">
           <div className="container mx-auto max-w-4xl">
-            <div className="bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-md border border-primary/30 rounded-2xl p-8 sm:p-10 shadow-xl hover:shadow-primary/30 transition-all duration-500 hover:border-primary/50">
-              <div className="text-center space-y-6">
-                <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-6 text-glow-strong font-coolvetica text-foreground">
-                  Event Details
-                </h2>
-                <div className="space-y-4 max-w-2xl mx-auto">
-                  <div className="flex flex-col sm:flex-row items-center justify-center gap-3 text-lg sm:text-xl font-varela text-foreground">
-                    <span className="text-2xl sm:text-3xl">📅</span>
+            <div className="text-center mb-8 sm:mb-10">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-glow-strong font-aller text-foreground">
+                Event Details
+              </h2>
+            </div>
+            <div className="bg-gradient-to-br from-card/90 to-card/60 backdrop-blur-lg border-2 border-primary/40 rounded-3xl p-6 sm:p-8 md:p-10 shadow-2xl hover:shadow-primary/40 transition-all duration-500 hover:border-primary/60 hover:scale-[1.02]">
+              <div className="space-y-6 sm:space-y-8">
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 text-lg sm:text-xl md:text-2xl font-varela text-foreground font-bold">
+                  <div className="flex items-center gap-3 sm:gap-4">
+                    <span className="text-2xl sm:text-3xl md:text-4xl">📅</span>
                     <span className="text-center sm:text-left">November 1st, 2025 : 9:00 AM IST</span>
                   </div>
-                  <div className="flex flex-col sm:flex-row items-center justify-center gap-3 text-lg sm:text-xl font-varela text-foreground">
-                    <span className="text-2xl sm:text-3xl">📍</span>
+                </div>
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 text-lg sm:text-xl md:text-2xl font-varela text-foreground font-bold">
+                  <div className="flex items-center gap-3 sm:gap-4">
+                    <span className="text-2xl sm:text-3xl md:text-4xl">📍</span>
                     <span className="text-center sm:text-left">Ahlcon International School, Mayur Vihar Phase 1, Delhi</span>
                   </div>
                 </div>
@@ -126,10 +125,10 @@ const Home = () => {
 
       {/* Event Countdown */}
       <ScrollReveal>
-        <section className="py-28 px-4 bg-gradient-to-b from-background/50 to-background">
+        <section className="py-20 sm:py-24 md:py-28 px-4 bg-gradient-to-b from-background/50 to-background">
           <div className="container mx-auto text-center">
             <ScrollFloat offset={40}>
-              <h2 className="text-5xl sm:text-6xl md:text-7xl font-black mb-16 text-glow-strong font-coolvetica text-foreground">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black mb-12 sm:mb-16 text-glow-strong font-aller text-foreground px-4">
                 Event Countdown
               </h2>
             </ScrollFloat>
@@ -170,24 +169,24 @@ const Home = () => {
 
       {/* Lanyard Section */}
       <ScrollReveal>
-        <section className="py-28 px-4 bg-gradient-to-b from-background/50 to-background">
+        <section className="py-20 sm:py-24 md:py-28 px-4 bg-gradient-to-b from-background/50 to-background">
           <div className="container mx-auto text-center max-w-4xl">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="relative p-12 rounded-3xl bg-gradient-to-br from-card/50 to-card/30 backdrop-blur-lg border-2 border-primary/50 shadow-2xl hover:shadow-primary/40 transition-all duration-300"
+              className="relative p-8 sm:p-10 md:p-12 rounded-3xl bg-gradient-to-br from-card/50 to-card/30 backdrop-blur-lg border-2 border-primary/50 shadow-2xl hover:shadow-primary/40 transition-all duration-300"
             >
-              <div className="flex flex-col md:flex-row items-center justify-center gap-8">
-                <img src={nobgLogo} alt="TEDx Logo" className="w-32 h-32 object-contain drop-shadow-[0_0_20px_rgba(255,23,68,0.5)]" />
-                <div>
-                  <h3 className="text-4xl sm:text-5xl font-black font-coolvetica text-foreground text-glow-strong mb-4">
+              <div className="flex flex-col md:flex-row items-center justify-center gap-6 sm:gap-8">
+                <img src={nobgLogo} alt="TEDx Logo" className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 object-contain drop-shadow-[0_0_20px_rgba(255,23,68,0.5)]" />
+                <div className="text-center">
+                  <h3 className="text-xl sm:text-2xl md:text-3xl font-black font-coolvetica text-foreground text-glow-strong mb-2 sm:mb-3">
                     See You There!
                   </h3>
-                  <p className="text-xl text-muted-foreground font-varela">Join us for an unforgettable experience</p>
+                  <p className="text-sm sm:text-base text-muted-foreground font-varela">Join us for an unforgettable experience</p>
                 </div>
-                <img src={afterglowLogo} alt="Afterglow Logo" className="w-32 h-32 object-contain drop-shadow-[0_0_20px_rgba(255,23,68,0.5)]" />
+                <img src={afterglowLogo} alt="Afterglow Logo" className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 object-contain drop-shadow-[0_0_20px_rgba(255,23,68,0.5)]" />
               </div>
             </motion.div>
           </div>
