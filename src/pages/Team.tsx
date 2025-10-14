@@ -4,7 +4,7 @@ import CustomCursor from "@/components/CustomCursor";
 import FuzzyText from "@/components/effects/FuzzyText";
 import ScrollReveal from "@/components/effects/ScrollReveal";
 import ScrollFloat from "@/components/effects/ScrollFloat";
-import teamPhoto from "@/assets/team-photo.jpg";
+import teamPhoto from "@/assets/team.jpg";
 
 const Team = () => {
   return (
@@ -24,7 +24,7 @@ const Team = () => {
         </div>
         <div className="relative z-10 container mx-auto px-4 text-center">
           <ScrollFloat>
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-foreground text-glow-strong mb-6">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-foreground text-glow-strong mb-6 font-coolvetica">
               The Team
             </h1>
           </ScrollFloat>
@@ -41,7 +41,7 @@ const Team = () => {
                   <span className="text-6xl sm:text-7xl relative z-10">👥</span>
                 </div>
               </div>
-              <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 sm:mb-12 text-foreground text-glow-strong">
+              <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 sm:mb-12 text-foreground text-glow-strong font-coolvetica">
                 Coming Soon
               </h2>
               <div className="w-24 h-1 bg-primary rounded-full mx-auto mb-8 sm:mb-10" />

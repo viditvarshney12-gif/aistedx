@@ -25,6 +25,7 @@ export default {
         mono: ['Space Mono', 'monospace'],
         title: ['Bebas Neue', 'cursive'],
         varela: ['Varela Round', 'sans-serif'],
+        coolvetica: ['Coolvetica', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",

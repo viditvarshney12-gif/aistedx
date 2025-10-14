@@ -12,7 +12,7 @@ import CircularGallery from "@/components/CircularGallery";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import mainLogo from "@/assets/main-logo.png";
-import whatIsTedx from "@/assets/what-is-tedx.jpg";
+import tedxLogo from "@/assets/tedx-logo.png";
 import heroBackground from "@/assets/hero-banner.jpg";
 import afterglowLogo from "@/assets/afterglow-logo.png";
 import nobgLogo from "@/assets/nobg.png";
@@ -46,7 +46,7 @@ const Home = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button size="lg" className="text-xl px-12 py-7 rounded-full hover:scale-110 transition-all duration-300 cursor-hover bg-white hover:bg-white/90 text-black font-bold shadow-2xl font-heading">
+              <Button size="lg" className="text-2xl px-14 py-8 rounded-full hover:scale-110 transition-all duration-300 cursor-hover bg-white hover:bg-white/90 text-black font-bold shadow-2xl font-coolvetica tracking-wide">
                 Buy Tickets
               </Button>
             </a>
@@ -54,10 +54,15 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Theme Section - Afterglow */}
+      {/* Theme Section - About Theme */}
       <ScrollReveal>
         <section className="py-24 px-4 bg-gradient-to-b from-background to-background/50">
           <div className="container mx-auto max-w-5xl text-center space-y-8">
+            <ScrollFloat offset={30}>
+              <h2 className="text-5xl sm:text-6xl md:text-7xl font-black mb-12 text-glow-strong font-coolvetica text-foreground">
+                About Theme
+              </h2>
+            </ScrollFloat>
             <ScrollFloat offset={30}>
               <div className="flex justify-center mb-8">
                 <img src={afterglowLogo} alt="Afterglow" className="w-full max-w-2xl h-auto" />
@@ -77,29 +82,14 @@ const Home = () => {
         </section>
       </ScrollReveal>
 
-      {/* Event Countdown */}
-      <ScrollReveal>
-        <section className="py-28 px-4 bg-gradient-to-b from-background/50 to-background">
-          <div className="container mx-auto text-center">
-            <ScrollFloat offset={40}>
-              <h2 className="text-5xl sm:text-6xl md:text-7xl font-black mb-16 text-glow-strong font-title text-foreground">
-                Event Countdown
-              </h2>
-            </ScrollFloat>
-            <CountdownTimer targetDate={eventDate} />
-          </div>
-        </section>
-      </ScrollReveal>
-
-
       {/* TEDx is Section */}
       <ScrollReveal>
         <section className="py-28 px-4 bg-gradient-to-b from-background/50 to-background">
           <div className="container mx-auto text-center max-w-6xl">
             <ScrollFloat offset={35}>
-              <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-12 font-title text-foreground text-glow-strong">
+              <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-12 font-coolvetica text-foreground text-glow-strong">
                 TEDxAhlconIntlSchool is{' '}
-                <RotatingText 
+                <RotatingText
                   words={['Back', 'Bigger', 'Better', 'Bolder']}
                   className="gradient-text text-glow-strong"
                 />
@@ -109,10 +99,49 @@ const Home = () => {
         </section>
       </ScrollReveal>
 
+      {/* Event Details Box */}
+      <ScrollReveal>
+        <section className="py-20 px-4 bg-gradient-to-b from-background to-card/30">
+          <div className="container mx-auto max-w-4xl">
+            <div className="bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-md border border-primary/30 rounded-2xl p-8 sm:p-10 shadow-xl hover:shadow-primary/30 transition-all duration-500 hover:border-primary/50">
+              <div className="text-center space-y-6">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-6 text-glow-strong font-coolvetica text-foreground">
+                  Event Details
+                </h2>
+                <div className="space-y-4 max-w-2xl mx-auto">
+                  <div className="flex flex-col sm:flex-row items-center justify-center gap-3 text-lg sm:text-xl font-varela text-foreground">
+                    <span className="text-2xl sm:text-3xl">📅</span>
+                    <span className="text-center sm:text-left">November 1st, 2025 : 9:00 AM IST</span>
+                  </div>
+                  <div className="flex flex-col sm:flex-row items-center justify-center gap-3 text-lg sm:text-xl font-varela text-foreground">
+                    <span className="text-2xl sm:text-3xl">📍</span>
+                    <span className="text-center sm:text-left">Ahlcon International School, Mayur Vihar Phase 1, Delhi</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </ScrollReveal>
+
+      {/* Event Countdown */}
+      <ScrollReveal>
+        <section className="py-28 px-4 bg-gradient-to-b from-background/50 to-background">
+          <div className="container mx-auto text-center">
+            <ScrollFloat offset={40}>
+              <h2 className="text-5xl sm:text-6xl md:text-7xl font-black mb-16 text-glow-strong font-coolvetica text-foreground">
+                Event Countdown
+              </h2>
+            </ScrollFloat>
+            <CountdownTimer targetDate={eventDate} />
+          </div>
+        </section>
+      </ScrollReveal>
+
       <ContentBlock
-        heading="What is TEDx"
+        heading="About TEDx"
         body="TEDx is a program of local, self-organized events that bring people together to share a TED-like experience. At a TEDx event, TED Talks video and live speakers combine to spark deep discussion and connection. These events are independently organized under a free license granted by TED."
-        imageUrl={whatIsTedx}
+        imageUrl={tedxLogo}
       />
 
       <ContentBlock
@@ -124,7 +153,7 @@ const Home = () => {
             </p>
             <div className="pt-4 space-y-3">
               <p className="text-base sm:text-lg font-varela text-primary text-glow">
-                📅 November 1st, 2025 | 9:00 AM IST
+                📅 November 1st, 2025 : 9:00 AM IST
               </p>
               <p className="text-base sm:text-lg font-varela text-primary text-glow">
                 📍 Ahlcon International School, Mayur Vihar Phase 1, Delhi
@@ -153,7 +182,7 @@ const Home = () => {
               <div className="flex flex-col md:flex-row items-center justify-center gap-8">
                 <img src={nobgLogo} alt="TEDx Logo" className="w-32 h-32 object-contain drop-shadow-[0_0_20px_rgba(255,23,68,0.5)]" />
                 <div>
-                  <h3 className="text-4xl sm:text-5xl font-black font-title text-foreground text-glow-strong mb-4">
+                  <h3 className="text-4xl sm:text-5xl font-black font-coolvetica text-foreground text-glow-strong mb-4">
                     See You There!
                   </h3>
                   <p className="text-xl text-muted-foreground font-varela">Join us for an unforgettable experience</p>

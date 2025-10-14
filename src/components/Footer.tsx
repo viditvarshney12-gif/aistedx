@@ -48,19 +48,19 @@ const Footer = () => {
                 href="https://www.instagram.com/tedxahlconintlschool/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-secondary flex items-center justify-center hover:bg-primary transition-all duration-300 hover:scale-110 hover-glow group cursor-hover"
+                className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-secondary flex items-center justify-center hover:bg-primary transition-all duration-300 hover:scale-110 hover-glow group cursor-hover"
                 aria-label="Instagram"
               >
-                <Instagram size={20} className="text-foreground group-hover:text-primary-foreground transition-colors sm:w-6 sm:h-6" />
+                <Instagram size={28} className="text-foreground group-hover:text-primary-foreground transition-colors sm:w-8 sm:h-8" />
               </a>
               <a
-                href="https://x.com/TedxAhlconIntl"
+                href="https://x.com/TEDxAhlconIntl"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-secondary flex items-center justify-center hover:bg-primary transition-all duration-300 hover:scale-110 hover-glow group cursor-hover"
+                className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-secondary flex items-center justify-center hover:bg-primary transition-all duration-300 hover:scale-110 hover-glow group cursor-hover"
                 aria-label="X (Twitter)"
               >
-                <Twitter size={20} className="text-foreground group-hover:text-primary-foreground transition-colors sm:w-6 sm:h-6" />
+                <Twitter size={28} className="text-foreground group-hover:text-primary-foreground transition-colors sm:w-8 sm:h-8" />
               </a>
             </div>
           </div>
