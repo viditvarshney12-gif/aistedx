@@ -10,7 +10,6 @@ import ScrollReveal from "@/components/effects/ScrollReveal";
 import ScrollFloat from "@/components/effects/ScrollFloat";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { useMobileDetection } from "@/hooks/use-mobile-detection";
 import mainLogo from "@/assets/main-logo.png";
 import tedxLogo from "@/assets/tedx-logo.png";
 import heroBackground from "@/assets/hero-banner.jpg";
@@ -19,10 +18,9 @@ import nobgLogo from "@/assets/nobg.png";
 
 const Home = () => {
   const eventDate = new Date('2025-11-01T09:00:00+05:30');
-  const isMobile = useMobileDetection();
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background mobile-safe-area">
       <CustomCursor />
       <Navbar />
       
@@ -36,34 +34,22 @@ const Home = () => {
 
         {/* Content */}
         <div className="relative z-10 container mx-auto px-4 text-center">
-          {isMobile ? (
-            <div className="pt-32 sm:pt-40 md:pt-48 lg:pt-64 xl:pt-80">
-          ) : (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1 }}
-              className="pt-32 sm:pt-40 md:pt-48 lg:pt-64 xl:pt-80"
-            >
-          )}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            className="pt-64 sm:pt-72 md:pt-80 lg:pt-96"
+          >
             <a 
               href="https://docs.google.com/forms/d/e/1FAIpQLSdkzkzO1tpNbt7-L6QMA7eW7tB745nKK0Sxcl0ByUpyaUnv4w/viewform?usp=dialog"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block"
             >
-              <Button 
-                size="lg" 
-                className="text-sm sm:text-base md:text-lg px-4 sm:px-6 md:px-8 py-3 sm:py-4 md:py-5 rounded-full hover:scale-105 sm:hover:scale-110 transition-all duration-300 cursor-hover bg-white hover:bg-white/90 text-black font-bold shadow-xl font-heading w-full max-w-xs sm:max-w-none"
-              >
+              <Button size="lg" className="text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 rounded-full hover:scale-110 transition-all duration-300 cursor-hover bg-white hover:bg-white/90 text-black font-bold shadow-xl font-heading">
                 Pre-Book Now
               </Button>
             </a>
-          {isMobile ? (
-            </div>
-          ) : (
-            </motion.div>
-          )}
+          </motion.div>
         </div>
       </section>
 
@@ -76,15 +62,12 @@ const Home = () => {
                 <img src={afterglowLogo} alt="Afterglow" className="w-full max-w-xl sm:max-w-2xl h-auto" />
               </div>
             </ScrollFloat>
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto font-varela leading-relaxed px-2 sm:px-4">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto font-varela leading-relaxed px-4">
               Afterglow represents the lasting radiance of ideas that continue to inspire and illuminate long after their initial spark. Join us as we explore the enduring impact of transformative thoughts.
             </p>
             <div className="pt-4">
-              <a href="/about" className="inline-block">
-                <Button 
-                  size="lg" 
-                  className="text-sm sm:text-base md:text-lg px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 rounded-full hover:scale-105 sm:hover:scale-110 transition-all duration-300 cursor-hover bg-primary hover:bg-primary/90 text-white font-bold shadow-xl font-heading w-full max-w-xs sm:max-w-none"
-                >
+              <a href="/about">
+                <Button size="lg" className="text-base sm:text-lg px-8 sm:px-10 py-5 sm:py-6 rounded-full hover:scale-110 transition-all duration-300 cursor-hover bg-primary hover:bg-primary/90 text-white font-bold shadow-xl font-heading">
                   Learn More
                 </Button>
               </a>
@@ -98,11 +81,11 @@ const Home = () => {
         <section className="py-20 sm:py-24 md:py-28 px-4 bg-gradient-to-b from-background/50 to-background">
           <div className="container mx-auto text-center max-w-6xl">
             <ScrollFloat offset={35}>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-black mb-6 sm:mb-8 md:mb-12 font-aller text-foreground text-glow-strong px-2 sm:px-4 leading-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black mb-8 sm:mb-12 font-aller text-foreground text-glow-strong px-4">
                 TEDxAhlconIntlSchool is{' '}
                 <RotatingText
                   words={['Back', 'Bigger', 'Better', 'Bolder']}
-                  className="gradient-text text-glow-strong block sm:inline"
+                  className="gradient-text text-glow-strong"
                 />
               </h2>
             </ScrollFloat>
@@ -144,7 +127,7 @@ const Home = () => {
         <section className="py-20 sm:py-24 md:py-28 px-4 bg-gradient-to-b from-background/50 to-background">
           <div className="container mx-auto text-center">
             <ScrollFloat offset={40}>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-black mb-8 sm:mb-12 md:mb-16 text-glow-strong font-aller text-foreground px-2 sm:px-4 leading-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black mb-12 sm:mb-16 text-glow-strong font-aller text-foreground px-4">
                 Event Countdown
               </h2>
             </ScrollFloat>
@@ -187,17 +170,13 @@ const Home = () => {
       <ScrollReveal>
         <section className="py-20 sm:py-24 md:py-28 px-4 bg-gradient-to-b from-background/50 to-background">
           <div className="container mx-auto text-center max-w-4xl">
-            {isMobile ? (
-              <div className="relative p-8 sm:p-10 md:p-12 rounded-3xl bg-gradient-to-br from-card/50 to-card/30 backdrop-blur-lg border-2 border-primary/50 shadow-2xl transition-all duration-300">
-            ) : (
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8 }}
-                className="relative p-8 sm:p-10 md:p-12 rounded-3xl bg-gradient-to-br from-card/50 to-card/30 backdrop-blur-lg border-2 border-primary/50 shadow-2xl hover:shadow-primary/40 transition-all duration-300"
-              >
-            )}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="relative p-8 sm:p-10 md:p-12 rounded-3xl bg-gradient-to-br from-card/50 to-card/30 backdrop-blur-lg border-2 border-primary/50 shadow-2xl hover:shadow-primary/40 transition-all duration-300"
+            >
               <div className="flex flex-col md:flex-row items-center justify-center gap-6 sm:gap-8">
                 <img src={nobgLogo} alt="TEDx Logo" className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 object-contain drop-shadow-[0_0_20px_rgba(255,23,68,0.5)]" />
                 <div className="text-center">
@@ -208,11 +187,7 @@ const Home = () => {
                 </div>
                 <img src={afterglowLogo} alt="Afterglow Logo" className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 object-contain drop-shadow-[0_0_20px_rgba(255,23,68,0.5)]" />
               </div>
-            {isMobile ? (
-              </div>
-            ) : (
-              </motion.div>
-            )}
+            </motion.div>
           </div>
         </section>
       </ScrollReveal>

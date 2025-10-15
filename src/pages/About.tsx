@@ -13,7 +13,7 @@ import stagePhoto from "@/assets/stage-photo.png";
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background mobile-safe-area">
       <CustomCursor />
       <Navbar />
 

@@ -1,6 +1,5 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef, ReactNode } from 'react';
-import { useMobileDetection } from '@/hooks/use-mobile-detection';
 
 interface ScrollFloatProps {
   children: ReactNode;
@@ -9,17 +8,7 @@ interface ScrollFloatProps {
 }
 
 const ScrollFloat = ({ children, className = '', offset = 50 }: ScrollFloatProps) => {
-  const isMobile = useMobileDetection();
   const ref = useRef<HTMLDivElement>(null);
-
-  if (isMobile) {
-    return (
-      <div ref={ref} className={className}>
-        {children}
-      </div>
-    );
-  }
-
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start end", "end start"]

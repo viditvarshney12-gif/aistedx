@@ -8,7 +8,7 @@ import speakersBg from "@/assets/speakers-bg.png";
 
 const Speakers = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background mobile-safe-area">
       <CustomCursor />
       <Navbar />
       

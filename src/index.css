@@ -6,7 +6,7 @@
 All colors MUST be HSL.
 */
 
-/* Removed Coolvetica font due to loading issues - using fallback fonts */
+/* Coolvetica font removed - using fallback fonts */
 
 @layer base {
   :root {
@@ -64,15 +64,24 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Red Hat Display', 'Inter', 'Segoe UI', 'Roboto', sans-serif;
+    font-family: 'Red Hat Display', sans-serif;
     cursor: none;
     overflow-x: hidden;
+    min-height: 100vh;
+    min-height: 100dvh; /* Dynamic viewport height for mobile */
   }
   
   /* Mobile responsiveness fixes */
   @media (max-width: 1024px) {
     body, * {
       cursor: auto !important;
+    }
+  }
+  
+  /* Prevent mobile zoom on input focus */
+  @media (max-width: 768px) {
+    input, textarea, select {
+      font-size: 16px !important;
     }
   }
 
@@ -87,28 +96,11 @@ All colors MUST be HSL.
       -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
     }
-    
-    /* Fix mobile touch issues */
-    * {
-      -webkit-tap-highlight-color: transparent;
-      -webkit-touch-callout: none;
-    }
-    
-    /* Ensure proper mobile scrolling */
-    body {
-      -webkit-overflow-scrolling: touch;
-    }
   }
 
   @media (max-width: 480px) {
     body {
       font-size: 13px;
-    }
-    
-    /* Extra small screens */
-    .container {
-      padding-left: 1rem;
-      padding-right: 1rem;
     }
   }
 
@@ -121,26 +113,12 @@ All colors MUST be HSL.
     @apply font-heading;
   }
 
-  /* Desktop cursor styles */
-  @media (min-width: 1025px) {
-    * {
-      cursor: none;
-    }
-
-    a, button {
-      cursor: none !important;
-    }
+  * {
+    cursor: none;
   }
-  
-  /* Mobile cursor styles */
-  @media (max-width: 1024px) {
-    * {
-      cursor: auto;
-    }
 
-    a, button {
-      cursor: pointer !important;
-    }
+  a, button {
+    cursor: none !important;
   }
 }
 
@@ -203,32 +181,25 @@ All colors MUST be HSL.
     @apply w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl;
   }
 
-  /* Prevent mobile zoom on input focus */
-  input, textarea, select {
-    font-size: 16px;
+  /* Prevent mobile black screen issues */
+  .mobile-safe-area {
+    min-height: 100vh;
+    min-height: 100dvh;
+    min-height: calc(100vh - env(safe-area-inset-top) - env(safe-area-inset-bottom));
   }
 
-  /* Mobile-specific button improvements */
+  /* Ensure proper touch targets on mobile */
   @media (max-width: 768px) {
-    button, a {
+    button, a, [role="button"] {
       min-height: 44px;
       min-width: 44px;
     }
   }
 
-  /* Improve mobile scrolling performance */
-  * {
-    -webkit-overflow-scrolling: touch;
-  }
-
-  /* Fix mobile viewport issues */
-  html, body {
-    height: 100%;
+  /* Fix potential overflow issues */
+  .mobile-container {
     overflow-x: hidden;
-  }
-
-  #root {
-    min-height: 100vh;
+    max-width: 100vw;
   }
 }
 

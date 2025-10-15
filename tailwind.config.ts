@@ -38,7 +38,7 @@ export default {
         mono: ['Space Mono', 'monospace'],
         title: ['Bebas Neue', 'cursive'],
         varela: ['Varela Round', 'sans-serif'],
-        coolvetica: ['Inter', 'Segoe UI', 'Roboto', 'sans-serif'],
+        coolvetica: ['Inter', 'sans-serif'],
         aller: ['Aller', 'sans-serif'],
       },
       colors: {
