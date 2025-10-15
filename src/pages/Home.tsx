@@ -37,7 +37,7 @@ const Home = () => {
         <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-10 md:h-10 bg-gradient-to-t from-background to-transparent" />
 
         {/* Content */}
-        <div className="relative z-10 container mx-auto px-4 text-center h-full flex items-end justify-center pb-10 md:block md:pb-0">
+        <div className="relative z-10 container mx-auto px-4 text-center h-full flex items-end justify-center pb-2 md:block md:pb-0">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -182,13 +182,13 @@ const Home = () => {
               transition={{ duration: 0.8 }}
               className="relative p-8 sm:p-10 md:p-12 rounded-3xl bg-gradient-to-br from-card/50 to-card/30 backdrop-blur-lg border-2 border-primary/50 shadow-2xl hover:shadow-primary/40 transition-all duration-300"
             >
-              <div className="flex flex-row items-center justify-center gap-5 sm:gap-8 flex-nowrap scale-[0.85] xs:scale-90 sm:scale-100">
+              <div className="flex flex-col md:flex-row items-center justify-center gap-6 sm:gap-8">
                 <img src={nobgLogo} alt="TEDx Logo" className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 object-contain drop-shadow-[0_0_20px_rgba(255,23,68,0.5)]" />
                 <div className="text-center">
-                  <h3 className="text-xl sm:text-2xl md:text-3xl font-black font-coolvetica text-foreground text-glow-strong mb-1 sm:mb-3 whitespace-nowrap">
+                  <h3 className="text-xl sm:text-2xl md:text-3xl font-black font-coolvetica text-foreground text-glow-strong mb-2 sm:mb-3">
                     See You There!
                   </h3>
-                  <p className="text-sm sm:text-base text-muted-foreground font-varela leading-snug max-w-[16rem] mx-auto">Join us for an unforgettable experience</p>
+                  <p className="text-sm sm:text-base text-muted-foreground font-varela">Join us for an unforgettable experience</p>
                 </div>
                 <img src={afterglowLogo} alt="Afterglow Logo" className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 object-contain drop-shadow-[0_0_20px_rgba(255,23,68,0.5)]" />
               </div>
