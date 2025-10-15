@@ -50,12 +50,12 @@ const Home = () => {
               rel="noopener noreferrer"
             >
               {/* Mobile: position CTA on lower end of hero image; Desktop: normal flow */}
-              <span className="block md:hidden absolute bottom-6 left-1/2 -translate-x-1/2">
+              <span className="block md:hidden absolute bottom-8 left-1/2 -translate-x-1/2">
                 <Button size="lg" className="text-[10px] px-5 py-2 rounded-full tracking-wide hover:scale-110 transition-all duration-300 cursor-hover bg-white hover:bg-white/90 text-black font-bold shadow-xl font-heading">
                   Pre-Book Now
                 </Button>
               </span>
-              <span className="hidden md:inline-block">
+              <span className="hidden md:inline-block md:absolute md:bottom-16 md:left-1/2 md:-translate-x-1/2">
                 <Button size="lg" className="text-lg px-8 py-6 rounded-full hover:scale-110 transition-all duration-300 cursor-hover bg-white hover:bg-white/90 text-black font-bold shadow-xl font-heading">
                 Pre-Book Now
                 </Button>
@@ -67,7 +67,7 @@ const Home = () => {
 
       {/* Theme Section - About Theme */}
       <ScrollReveal>
-        <section className="py-16 sm:py-20 md:py-24 px-4 bg-gradient-to-b from-background to-background/50">
+        <section className="py-12 sm:py-20 md:py-24 px-4 bg-gradient-to-b from-background to-background/50">
           <div className="container mx-auto max-w-5xl text-center space-y-6 sm:space-y-8">
             <ScrollFloat offset={30}>
               <div className="flex justify-center mb-6 sm:mb-8">
