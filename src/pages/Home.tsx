@@ -104,18 +104,14 @@ const Home = () => {
               </h2>
             </div>
             <div className="bg-gradient-to-br from-card/90 to-card/60 backdrop-blur-lg border-2 border-primary/40 rounded-3xl p-6 sm:p-8 md:p-10 shadow-2xl hover:shadow-primary/40 transition-all duration-500 hover:border-primary/60 hover:scale-[1.02]">
-              <div className="space-y-6 sm:space-y-8">
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 text-sm sm:text-xl md:text-2xl font-varela text-foreground font-bold">
-                  <div className="flex items-center gap-3 sm:gap-4">
-                    <span className="text-xl sm:text-3xl md:text-4xl">📅</span>
-                    <span className="text-center sm:text-left">Nov 1, 2025 · 9:00 AM IST</span>
-                  </div>
+              <div className="space-y-3 sm:space-y-4">
+                <div className="flex items-center justify-center gap-2 sm:gap-4 text-sm sm:text-xl md:text-2xl font-varela text-foreground font-bold">
+                  <span className="text-lg sm:text-3xl md:text-4xl">📅</span>
+                  <span className="text-center sm:text-left whitespace-nowrap">Nov 1, 2025 · 9:00 AM IST</span>
                 </div>
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 text-sm sm:text-xl md:text-2xl font-varela text-foreground font-bold">
-                  <div className="flex items-center gap-3 sm:gap-4">
-                    <span className="text-xl sm:text-3xl md:text-4xl">📍</span>
-                    <span className="text-center sm:text-left">Ahlcon International School, Mayur Vihar Phase 1, Delhi</span>
-                  </div>
+                <div className="flex items-center justify-center gap-2 sm:gap-4 text-sm sm:text-xl md:text-2xl font-varela text-foreground font-bold">
+                  <span className="text-lg sm:text-3xl md:text-4xl">📍</span>
+                  <span className="text-center sm:text-left whitespace-nowrap">Ahlcon International School, Mayur Vihar Phase 1, Delhi</span>
                 </div>
               </div>
             </div>
@@ -179,7 +175,7 @@ const Home = () => {
               transition={{ duration: 0.8 }}
               className="relative p-8 sm:p-10 md:p-12 rounded-3xl bg-gradient-to-br from-card/50 to-card/30 backdrop-blur-lg border-2 border-primary/50 shadow-2xl hover:shadow-primary/40 transition-all duration-300"
             >
-              <div className="flex flex-col md:flex-row items-center justify-center gap-6 sm:gap-8">
+              <div className="flex flex-row items-center justify-center gap-6 sm:gap-8 flex-wrap md:flex-nowrap">
                 <img src={nobgLogo} alt="TEDx Logo" className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 object-contain drop-shadow-[0_0_20px_rgba(255,23,68,0.5)]" />
                 <div className="text-center">
                   <h3 className="text-xl sm:text-2xl md:text-3xl font-black font-coolvetica text-foreground text-glow-strong mb-2 sm:mb-3">
