@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import MobileSafeWrapper from "./components/MobileSafeWrapper";
+import SafeBoundary from "./components/SafeBoundary";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Speakers from "./pages/Speakers";
@@ -26,24 +27,26 @@ const ScrollToTop = () => {
 
 const App = () => {
   return (
-    <MobileSafeWrapper>
-      <QueryClientProvider client={queryClient}>
-        <TooltipProvider>
-          <Toaster />
-          <Sonner />
-          <BrowserRouter>
-            <ScrollToTop />
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/speakers" element={<Speakers />} />
-              <Route path="/team" element={<Team />} />
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </BrowserRouter>
-        </TooltipProvider>
-      </QueryClientProvider>
-    </MobileSafeWrapper>
+    <SafeBoundary>
+      <MobileSafeWrapper>
+        <QueryClientProvider client={queryClient}>
+          <TooltipProvider>
+            <Toaster />
+            <Sonner />
+            <BrowserRouter>
+              <ScrollToTop />
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/speakers" element={<Speakers />} />
+                <Route path="/team" element={<Team />} />
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </BrowserRouter>
+          </TooltipProvider>
+        </QueryClientProvider>
+      </MobileSafeWrapper>
+    </SafeBoundary>
   );
 };
 
