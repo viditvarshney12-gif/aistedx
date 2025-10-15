@@ -16,7 +16,7 @@ const Hero = ({ title, subtitle, description, imageUrl, compact = false }: HeroP
   }, []);
 
   return (
-    <div className={`relative ${compact ? 'h-[40vh] min-h-[300px]' : 'h-screen min-h-[600px]'} flex items-center justify-center overflow-hidden`}>
+    <div className={`relative ${compact ? 'h-[40vh] min-h-[300px]' : 'h-[100svh] min-h-[600px]'} flex items-center justify-center overflow-hidden`}>
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         {imageUrl ? (
