@@ -26,10 +26,10 @@ const Home = () => {
       <Navbar />
       
       {/* Hero Section - Full Screen with Background Image */}
-      <section className="relative h-[85vh] sm:h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative h-[100svh] md:h-[90vh] lg:h-screen flex items-center justify-center overflow-hidden">
         {/* Background Image */}
         <div 
-          className="absolute inset-0 bg-contain sm:bg-cover bg-center bg-no-repeat"
+          className="absolute inset-0 bg-contain md:bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${heroBackground})` }}
         />
 
