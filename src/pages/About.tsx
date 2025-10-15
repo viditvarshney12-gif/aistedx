@@ -65,15 +65,15 @@ const About = () => {
         <div className="container mx-auto max-w-6xl">
           <ScrollReveal>
             <div className="grid md:grid-cols-2 gap-8 items-center mb-16">
-              <div className="bg-card/50 backdrop-blur-sm border-2 border-primary/30 rounded-3xl p-8 sm:p-10 hover:border-primary/40 transition-all duration-300 shadow-lg">
+              <div className="bg-card/50 backdrop-blur-sm border-2 border-primary/30 rounded-3xl p-8 sm:p-10 hover:border-primary/40 transition-all duration-300 shadow-lg text-left sm:text-left">
                 <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-6 font-aller">
                   <ShinyText className="text-foreground text-glow">About TED</ShinyText>
                 </h2>
                 <div className="space-y-4">
-                  <p className="text-base sm:text-lg text-muted-foreground leading-relaxed font-varela text-justify">
+                  <p className="text-base sm:text-lg text-muted-foreground leading-relaxed font-varela text-left sm:text-justify">
                     TED is a nonprofit, nonpartisan organization dedicated to discovering, debating and spreading ideas that spark conversation, deepen understanding and drive meaningful change. Our organization is devoted to curiosity, reason, wonder and the pursuit of knowledge : without an agenda.
                   </p>
-                  <p className="text-base sm:text-lg text-muted-foreground leading-relaxed font-varela text-justify">
+                  <p className="text-base sm:text-lg text-muted-foreground leading-relaxed font-varela text-left sm:text-justify">
                     We welcome people from every discipline and culture who seek a deeper understanding of the world and connection with others, and we invite everyone to engage with ideas and activate them in your community.
                   </p>
                 </div>
@@ -89,12 +89,12 @@ const About = () => {
               <div className="rounded-3xl overflow-hidden shadow-2xl hover:shadow-primary/30 transition-all duration-500 border-2 border-primary/20 hover:border-primary/40 order-2 md:order-1">
                 <img src={performancePhoto} alt="TEDx Performance" className="w-full h-full object-cover" />
               </div>
-              <div className="bg-card/50 backdrop-blur-sm border-2 border-primary/30 rounded-3xl p-8 sm:p-10 hover:border-primary/40 transition-all duration-300 shadow-lg order-1 md:order-2">
+              <div className="bg-card/50 backdrop-blur-sm border-2 border-primary/30 rounded-3xl p-8 sm:p-10 hover:border-primary/40 transition-all duration-300 shadow-lg order-1 md:order-2 text-left sm:text-left">
                 <div className="space-y-4">
-                  <p className="text-base sm:text-lg text-muted-foreground leading-relaxed font-varela text-justify">
+                  <p className="text-base sm:text-lg text-muted-foreground leading-relaxed font-varela text-left sm:text-justify">
                     TED began in 1984 as a conference where Technology, Entertainment and Design converged, but today it spans a multitude of worldwide communities and initiatives exploring everything from science and business to education, arts and global issues.
                   </p>
-                  <p className="text-base sm:text-lg text-muted-foreground leading-relaxed font-varela text-justify">
+                  <p className="text-base sm:text-lg text-muted-foreground leading-relaxed font-varela text-left sm:text-justify">
                     In addition to the TED Talks curated from our annual conferences and published on TED.com, we produce original podcasts, short video series, animated educational lessons (TED-Ed) and TV programs that are translated into more than 100 languages and distributed via partnerships around the world.
                   </p>
                 </div>
@@ -108,15 +108,15 @@ const About = () => {
       <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-background">
         <div className="container mx-auto max-w-5xl">
           <ScrollReveal>
-            <div className="bg-card/50 backdrop-blur-sm border-2 border-primary/30 rounded-3xl p-8 sm:p-12 hover:border-primary/40 transition-all duration-300 shadow-lg">
+            <div className="bg-card/50 backdrop-blur-sm border-2 border-primary/30 rounded-3xl p-8 sm:p-12 hover:border-primary/40 transition-all duration-300 shadow-lg text-left sm:text-left">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-8 text-center font-aller">
                 <ShinyText className="text-foreground text-glow">About TEDx</ShinyText>
               </h2>
               <div className="space-y-4">
-                <p className="text-base sm:text-lg text-muted-foreground leading-relaxed font-varela text-justify">
+                <p className="text-base sm:text-lg text-muted-foreground leading-relaxed font-varela text-left sm:text-justify">
                   In the spirit of discovering and spreading ideas, TEDx is a program of local, self-organized events that bring people together to share a TED-like experience. At a TEDx event, TED Talks video and live speakers combine to spark deep discussion and connection. These local, self-organized events are branded TEDx, where x = independently organized TED event. The TED Conference provides general guidance for the TEDx program, but individual TEDx events are self-organized (subject to certain rules and regulations).
                 </p>
-                <p className="text-base sm:text-lg text-muted-foreground leading-relaxed font-varela text-justify">
+                <p className="text-base sm:text-lg text-muted-foreground leading-relaxed font-varela text-left sm:text-justify">
                   Each year, thousands of independently run TEDx events bring people together to share ideas and bridge divides in communities on every continent. Through the Audacious Project, TED has helped catalyze more than $3 billion in funding for projects that seek to make the world more beautiful, sustainable and just.
                 </p>
               </div>

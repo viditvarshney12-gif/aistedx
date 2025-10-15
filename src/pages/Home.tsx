@@ -26,30 +26,30 @@ const Home = () => {
       <Navbar />
       
       {/* Hero Section - Full Screen with Background Image */}
-      <section className="relative h-[100svh] md:h-[90vh] lg:h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative h-[55vh] md:h-[90vh] lg:h-screen flex items-center justify-center overflow-hidden">
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-contain md:bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${heroBackground})` }}
         />
         {/* Gradient overlays to blend any remaining space (no visible gaps) */}
-        <div className="pointer-events-none absolute top-0 left-0 right-0 h-16 md:h-10 bg-gradient-to-b from-background to-transparent" />
-        <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-16 md:h-10 bg-gradient-to-t from-background to-transparent" />
+        <div className="pointer-events-none absolute top-0 left-0 right-0 h-10 md:h-10 bg-gradient-to-b from-background to-transparent" />
+        <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-10 md:h-10 bg-gradient-to-t from-background to-transparent" />
 
         {/* Content */}
-        <div className="relative z-10 container mx-auto px-4 text-center">
+        <div className="relative z-10 container mx-auto px-4 text-center h-full flex items-end justify-center pb-6 md:block md:pb-0">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="pt-12 sm:pt-40 md:pt-60 lg:pt-80"
+            className="pt-0 sm:pt-40 md:pt-60 lg:pt-80"
           >
             <a 
               href="https://docs.google.com/forms/d/e/1FAIpQLSdkzkzO1tpNbt7-L6QMA7eW7tB745nKK0Sxcl0ByUpyaUnv4w/viewform?usp=dialog"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button size="lg" className="text-xs sm:text-lg px-4 sm:px-8 py-3 sm:py-6 rounded-full hover:scale-110 transition-all duration-300 cursor-hover bg-white hover:bg-white/90 text-black font-bold shadow-xl font-heading">
+              <Button size="lg" className="text-[10px] sm:text-lg px-3 sm:px-8 py-2 sm:py-6 rounded-full hover:scale-110 transition-all duration-300 cursor-hover bg-white hover:bg-white/90 text-black font-bold shadow-xl font-heading">
                 Pre-Book Now
               </Button>
             </a>
@@ -182,15 +182,15 @@ const Home = () => {
               transition={{ duration: 0.8 }}
               className="relative p-8 sm:p-10 md:p-12 rounded-3xl bg-gradient-to-br from-card/50 to-card/30 backdrop-blur-lg border-2 border-primary/50 shadow-2xl hover:shadow-primary/40 transition-all duration-300"
             >
-              <div className="flex flex-row items-center justify-center gap-6 sm:gap-8 flex-nowrap">
-                <img src={nobgLogo} alt="TEDx Logo" className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 object-contain drop-shadow-[0_0_20px_rgba(255,23,68,0.5)]" />
+              <div className="flex flex-row items-center justify-center gap-4 sm:gap-8 flex-nowrap">
+                <img src={nobgLogo} alt="TEDx Logo" className="w-20 h-20 xs:w-24 xs:h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 object-contain drop-shadow-[0_0_20px_rgba(255,23,68,0.5)] translate-x-1" />
                 <div className="text-center">
-                  <h3 className="text-xl sm:text-2xl md:text-3xl font-black font-coolvetica text-foreground text-glow-strong mb-2 sm:mb-3">
+                  <h3 className="text-lg xs:text-xl sm:text-2xl md:text-3xl font-black font-coolvetica text-foreground text-glow-strong mb-1 sm:mb-3 whitespace-nowrap">
                     See You There!
                   </h3>
-                  <p className="text-sm sm:text-base text-muted-foreground font-varela">Join us for an unforgettable experience</p>
+                  <p className="text-xs xs:text-sm sm:text-base text-muted-foreground font-varela leading-snug max-w-[14rem] mx-auto">Join us for an unforgettable experience</p>
                 </div>
-                <img src={afterglowLogo} alt="Afterglow Logo" className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 object-contain drop-shadow-[0_0_20px_rgba(255,23,68,0.5)]" />
+                <img src={afterglowLogo} alt="Afterglow Logo" className="w-20 h-20 xs:w-24 xs:h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 object-contain drop-shadow-[0_0_20px_rgba(255,23,68,0.5)] -translate-x-1" />
               </div>
             </motion.div>
           </div>
