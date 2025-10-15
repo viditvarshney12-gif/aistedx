@@ -10,8 +10,20 @@ interface RotatingTextProps {
 const RotatingText = ({ words, className = '', interval = 2000 }: RotatingTextProps) => {
   const [index, setIndex] = useState(0);
   const [isStarted, setIsStarted] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const ref = useRef<HTMLSpanElement>(null);
   const isInView = useInView(ref, { once: true });
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   useEffect(() => {
     if (isInView && !isStarted) {
@@ -20,14 +32,23 @@ const RotatingText = ({ words, className = '', interval = 2000 }: RotatingTextPr
   }, [isInView, isStarted]);
 
   useEffect(() => {
-    if (!isStarted) return;
+    if (!isStarted || isMobile) return;
     
     const timer = setInterval(() => {
       setIndex((prevIndex) => (prevIndex + 1) % words.length);
     }, interval);
 
     return () => clearInterval(timer);
-  }, [words.length, interval, isStarted]);
+  }, [words.length, interval, isStarted, isMobile]);
+
+  // On mobile, just show the first word without animation
+  if (isMobile) {
+    return (
+      <span ref={ref} className={`inline-block ${className}`}>
+        {words[0]}
+      </span>
+    );
+  }
 
   return (
     <span ref={ref} className={`inline-block ${className}`}>

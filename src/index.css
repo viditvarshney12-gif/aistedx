@@ -223,6 +223,28 @@ All colors MUST be HSL.
       -ms-user-select: text;
       user-select: text;
     }
+
+    /* Prevent mobile disappearing issues */
+    html, body {
+      position: relative;
+      overflow-x: hidden;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    /* Ensure proper mobile rendering */
+    #root {
+      min-height: 100vh;
+      min-height: 100dvh;
+      position: relative;
+    }
+
+    /* Disable problematic animations on mobile */
+    .animate-shiny,
+    .animate-fuzzy,
+    .animate-float,
+    .animate-glow-pulse {
+      animation: none !important;
+    }
   }
 }
 
