@@ -39,9 +39,9 @@ const Home = () => {
         {/* Content */}
         <div className="relative z-10 container mx-auto px-4 text-center h-full md:block">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
             className="md:pt-60 lg:pt-80"
           >
             <a 
@@ -55,7 +55,7 @@ const Home = () => {
                   Pre-Book Now
                 </Button>
               </span>
-              <span className="hidden md:inline-block md:absolute md:bottom-20 md:left-1/2 md:-translate-x-1/2">
+              <span className="hidden md:inline-block md:absolute md:bottom-28 md:left-1/2 md:-translate-x-1/2">
                 <Button size="lg" className="text-lg px-8 py-6 rounded-full hover:scale-110 transition-all duration-300 cursor-hover bg-white hover:bg-white/90 text-black font-bold shadow-xl font-heading">
                 Pre-Book Now
                 </Button>
