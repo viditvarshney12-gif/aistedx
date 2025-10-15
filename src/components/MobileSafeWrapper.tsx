@@ -6,7 +6,6 @@ interface MobileSafeWrapperProps {
 }
 
 const MobileSafeWrapper = ({ children, fallback }: MobileSafeWrapperProps) => {
-  const [hasError, setHasError] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -20,24 +19,18 @@ const MobileSafeWrapper = ({ children, fallback }: MobileSafeWrapperProps) => {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  // Error boundary for mobile
+  // Error boundary for mobile - just log errors, don't prevent rendering
   useEffect(() => {
     const handleError = (error: ErrorEvent) => {
-      console.error('Mobile error caught:', error);
-      if (isMobile) {
-        setHasError(true);
-      }
+      console.warn('Mobile error caught but continuing to render:', error);
+      // Don't prevent rendering - just log and continue
     };
 
     window.addEventListener('error', handleError);
     return () => window.removeEventListener('error', handleError);
   }, [isMobile]);
 
-  if (hasError && isMobile) {
-    console.warn("MobileSafeWrapper suppressed an error, but continuing to render.");
-    return <>{children}</>;
-  }
-
+  // Always render children - no error pages on mobile
   return <>{children}</>;
 };
 
