@@ -145,7 +145,7 @@ const Home = () => {
 
       <ContentBlock
         heading="About TEDxAhlconIntlSchool"
-        headingClassName="text-3xl sm:text-4xl md:text-5xl"
+        headingClassName="text-2xl sm:text-3xl md:text-4xl"
         body={
           <div className="space-y-4">
             <p className="font-varela text-base sm:text-lg">
