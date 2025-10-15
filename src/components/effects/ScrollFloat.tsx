@@ -22,6 +22,13 @@ const ScrollFloat = ({ children, className = '', offset = 50 }: ScrollFloatProps
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
+  // Always initialize scroll hooks to keep hook order stable
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"]
+  });
+  const y = useTransform(scrollYProgress, [0, 1], [offset, -offset]);
+
   // On mobile, render without animations to prevent crashes
   if (isMobile) {
     return (
@@ -31,18 +38,7 @@ const ScrollFloat = ({ children, className = '', offset = 50 }: ScrollFloatProps
     );
   }
 
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"]
-  });
-
-  const y = useTransform(scrollYProgress, [0, 1], [offset, -offset]);
-
-  return (
-    <motion.div ref={ref} style={{ y }} className={className}>
-      {children}
-    </motion.div>
-  );
+  return <motion.div ref={ref} style={{ y }} className={className}>{children}</motion.div>;
 };
 
 export default ScrollFloat;
