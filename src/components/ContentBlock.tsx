@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 interface ContentBlockProps {
   heading: string;
@@ -9,6 +9,7 @@ interface ContentBlockProps {
 
 const ContentBlock = ({ heading, body, imageUrl, reverse = false }: ContentBlockProps) => {
   const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -22,21 +23,17 @@ const ContentBlock = ({ heading, body, imageUrl, reverse = false }: ContentBlock
       { threshold: 0.1 }
     );
 
-    const element = document.getElementById(`content-block-${heading}`);
-    if (element) {
-      observer.observe(element);
-    }
+    const element = sectionRef.current;
+    if (element) observer.observe(element);
 
     return () => {
-      if (element) {
-        observer.unobserve(element);
-      }
+      if (element) observer.unobserve(element);
     };
   }, [heading]);
 
   return (
     <section 
-      id={`content-block-${heading}`}
+      ref={sectionRef}
       className="py-16 sm:py-20 lg:py-28 px-4 sm:px-6 lg:px-8"
     >
       <div className="container mx-auto">

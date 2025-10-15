@@ -115,12 +115,14 @@ All colors MUST be HSL.
     @apply font-heading;
   }
 
-  * {
-    cursor: none;
-  }
-
-  a, button {
-    cursor: none !important;
+  /* Custom cursor only for desktop */
+  @media (min-width: 1025px) {
+    * {
+      cursor: none;
+    }
+    a, button {
+      cursor: none !important;
+    }
   }
 }
 
