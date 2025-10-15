@@ -66,7 +66,7 @@ const Home = () => {
               Afterglow represents the lasting radiance of ideas that continue to inspire and illuminate long after their initial spark. Join us as we explore the enduring impact of transformative thoughts.
             </p>
             <div className="pt-4">
-              <a href="/about">
+              <a href="/about" className="inline-block">
                 <Button size="lg" className="text-base sm:text-lg px-8 sm:px-10 py-5 sm:py-6 rounded-full hover:scale-110 transition-all duration-300 cursor-hover bg-primary hover:bg-primary/90 text-white font-bold shadow-xl font-heading">
                   Learn More
                 </Button>
