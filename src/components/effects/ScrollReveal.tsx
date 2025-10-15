@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { ReactNode } from 'react';
+import { useMobileDetection } from '@/hooks/use-mobile-detection';
 
 interface ScrollRevealProps {
   children: ReactNode;
@@ -8,6 +9,16 @@ interface ScrollRevealProps {
 }
 
 const ScrollReveal = ({ children, className = '', delay = 0 }: ScrollRevealProps) => {
+  const isMobile = useMobileDetection();
+
+  if (isMobile) {
+    return (
+      <div className={className}>
+        {children}
+      </div>
+    );
+  }
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}

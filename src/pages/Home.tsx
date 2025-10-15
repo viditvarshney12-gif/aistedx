@@ -10,6 +10,7 @@ import ScrollReveal from "@/components/effects/ScrollReveal";
 import ScrollFloat from "@/components/effects/ScrollFloat";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import { useMobileDetection } from "@/hooks/use-mobile-detection";
 import mainLogo from "@/assets/main-logo.png";
 import tedxLogo from "@/assets/tedx-logo.png";
 import heroBackground from "@/assets/hero-banner.jpg";
@@ -18,6 +19,7 @@ import nobgLogo from "@/assets/nobg.png";
 
 const Home = () => {
   const eventDate = new Date('2025-11-01T09:00:00+05:30');
+  const isMobile = useMobileDetection();
 
   return (
     <div className="min-h-screen bg-background">
@@ -34,12 +36,16 @@ const Home = () => {
 
         {/* Content */}
         <div className="relative z-10 container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            className="pt-32 sm:pt-40 md:pt-48 lg:pt-64 xl:pt-80"
-          >
+          {isMobile ? (
+            <div className="pt-32 sm:pt-40 md:pt-48 lg:pt-64 xl:pt-80">
+          ) : (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}
+              className="pt-32 sm:pt-40 md:pt-48 lg:pt-64 xl:pt-80"
+            >
+          )}
             <a 
               href="https://docs.google.com/forms/d/e/1FAIpQLSdkzkzO1tpNbt7-L6QMA7eW7tB745nKK0Sxcl0ByUpyaUnv4w/viewform?usp=dialog"
               target="_blank"
@@ -53,7 +59,11 @@ const Home = () => {
                 Pre-Book Now
               </Button>
             </a>
-          </motion.div>
+          {isMobile ? (
+            </div>
+          ) : (
+            </motion.div>
+          )}
         </div>
       </section>
 
@@ -177,13 +187,17 @@ const Home = () => {
       <ScrollReveal>
         <section className="py-20 sm:py-24 md:py-28 px-4 bg-gradient-to-b from-background/50 to-background">
           <div className="container mx-auto text-center max-w-4xl">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="relative p-8 sm:p-10 md:p-12 rounded-3xl bg-gradient-to-br from-card/50 to-card/30 backdrop-blur-lg border-2 border-primary/50 shadow-2xl hover:shadow-primary/40 transition-all duration-300"
-            >
+            {isMobile ? (
+              <div className="relative p-8 sm:p-10 md:p-12 rounded-3xl bg-gradient-to-br from-card/50 to-card/30 backdrop-blur-lg border-2 border-primary/50 shadow-2xl transition-all duration-300">
+            ) : (
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="relative p-8 sm:p-10 md:p-12 rounded-3xl bg-gradient-to-br from-card/50 to-card/30 backdrop-blur-lg border-2 border-primary/50 shadow-2xl hover:shadow-primary/40 transition-all duration-300"
+              >
+            )}
               <div className="flex flex-col md:flex-row items-center justify-center gap-6 sm:gap-8">
                 <img src={nobgLogo} alt="TEDx Logo" className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 object-contain drop-shadow-[0_0_20px_rgba(255,23,68,0.5)]" />
                 <div className="text-center">
@@ -194,7 +208,11 @@ const Home = () => {
                 </div>
                 <img src={afterglowLogo} alt="Afterglow Logo" className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 object-contain drop-shadow-[0_0_20px_rgba(255,23,68,0.5)]" />
               </div>
-            </motion.div>
+            {isMobile ? (
+              </div>
+            ) : (
+              </motion.div>
+            )}
           </div>
         </section>
       </ScrollReveal>
