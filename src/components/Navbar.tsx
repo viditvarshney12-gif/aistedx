@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useInRouterContext } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
-const Navbar = () => {
+const NavbarInner = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
@@ -92,6 +92,32 @@ const Navbar = () => {
       </div>
     </nav>
   );
+};
+
+const Navbar = () => {
+  const inRouter = useInRouterContext();
+  if (!inRouter) {
+    // Minimal static navbar if rendered outside Router to avoid hook errors
+    return (
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-lg border-b border-border shadow-2xl">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16 sm:h-20">
+            <a href="/" className="flex items-center space-x-1 sm:space-x-2">
+              <span className="text-xl sm:text-2xl font-bold text-primary">TEDx</span>
+              <span className="text-xl sm:text-2xl font-light text-foreground">AhlconIntlSchool</span>
+            </a>
+            <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
+              <a href="/" className="text-sm lg:text-base font-medium text-foreground">Home</a>
+              <a href="#/about" className="text-sm lg:text-base font-medium text-foreground">About</a>
+              <a href="#/speakers" className="text-sm lg:text-base font-medium text-foreground">Speakers</a>
+              <a href="#/team" className="text-sm lg:text-base font-medium text-foreground">The Team</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    );
+  }
+  return <NavbarInner />;
 };
 
 export default Navbar;
