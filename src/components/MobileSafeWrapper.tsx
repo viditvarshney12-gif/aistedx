@@ -25,9 +25,22 @@ const MobileSafeWrapper = ({ children, fallback }: MobileSafeWrapperProps) => {
       console.warn('Mobile error caught but continuing to render:', error);
       // Don't prevent rendering - just log and continue
     };
+    const handleUnhandledRejection = (event: PromiseRejectionEvent) => {
+      console.warn('Unhandled promise rejection on mobile (continuing to render):', event.reason);
+      // Prevent default to avoid noisy console errors disrupting UX
+      try {
+        event.preventDefault();
+      } catch (_) {
+        // ignore
+      }
+    };
 
     window.addEventListener('error', handleError);
-    return () => window.removeEventListener('error', handleError);
+    window.addEventListener('unhandledrejection', handleUnhandledRejection);
+    return () => {
+      window.removeEventListener('error', handleError);
+      window.removeEventListener('unhandledrejection', handleUnhandledRejection);
+    };
   }, [isMobile]);
 
   // Always render children - no error pages on mobile
