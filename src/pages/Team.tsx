@@ -56,7 +56,7 @@ const Team = () => {
                     href="https://www.instagram.com/tedxahlconintlschool/" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="inline-block text-base sm:text-xl font-varela text-primary hover:text-primary-glow transition-colors duration-300 cursor-hover relative group whitespace-nowrap"
+                    className="inline-block text-xl font-varela text-primary hover:text-primary-glow transition-colors duration-300 cursor-hover relative group"
                   >
                     Follow us on Social Media for updates
                     <span className="absolute bottom-0 left-0 w-full h-0.5 bg-foreground/20 transform origin-left transition-transform duration-300" />
