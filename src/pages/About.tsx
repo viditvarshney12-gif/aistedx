@@ -41,14 +41,14 @@ const About = () => {
               <div className="bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-md border-2 border-primary/30 rounded-2xl p-10 sm:p-12 hover-lift shadow-lg relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent pointer-events-none" />
                 <div className="relative z-10">
-                  <h3 className="text-3xl sm:text-4xl md:text-5xl font-black mb-8 text-center text-foreground font-coolvetica">
+                  <h3 className="text-2xl sm:text-4xl md:text-5xl font-black mb-6 sm:mb-8 text-center text-foreground font-coolvetica leading-snug">
                     <ShinyText className="text-glow">Afterglow : Light that Outlives the Flame</ShinyText>
                   </h3>
-                  <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed mb-6 font-varela text-justify">
+                  <p className="text-base sm:text-xl text-muted-foreground leading-relaxed mb-6 font-varela sm:text-justify text-left">
                     An afterglow is the light that remains after the source has faded : a lasting impression, an echo of brilliance.
                     It's the warmth that lingers after a fire, the glow that follows a sunset, and the impact that outlasts a moment.
                   </p>
-                  <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed font-varela text-justify">
+                  <p className="text-base sm:text-xl text-muted-foreground leading-relaxed font-varela sm:text-justify text-left">
                     At TEDxAhlconIntlSchool, we celebrate ideas that endure. The conversations we spark, the perspectives we challenge,
                     and the connections we forge continue to resonate long after the event ends. Join us as we explore the lasting
                     impact of transformative ideas.

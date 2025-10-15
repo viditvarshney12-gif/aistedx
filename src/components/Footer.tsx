@@ -19,22 +19,22 @@ const Footer = () => {
             <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Quick Links</h4>
             <ul className="space-y-2 sm:space-y-3">
               <li>
-                <a href="/" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block text-sm sm:text-base cursor-hover">
+                <a href="#/" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block text-sm sm:text-base cursor-hover">
                   Home
                 </a>
               </li>
               <li>
-                <a href="/about" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block text-sm sm:text-base cursor-hover">
+                <a href="#/about" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block text-sm sm:text-base cursor-hover">
                   About
                 </a>
               </li>
               <li>
-                <a href="/speakers" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block text-sm sm:text-base cursor-hover">
+                <a href="#/speakers" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block text-sm sm:text-base cursor-hover">
                   Speakers
                 </a>
               </li>
               <li>
-                <a href="/team" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block text-sm sm:text-base cursor-hover">
+                <a href="#/team" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block text-sm sm:text-base cursor-hover">
                   The Team
                 </a>
               </li>

@@ -26,7 +26,7 @@ const Home = () => {
       <Navbar />
       
       {/* Hero Section - Full Screen with Background Image */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative h-[85vh] sm:h-screen flex items-center justify-center overflow-hidden">
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-contain sm:bg-cover bg-center bg-no-repeat"
@@ -39,14 +39,14 @@ const Home = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="pt-40 sm:pt-56 md:pt-72 lg:pt-96"
+            className="pt-24 sm:pt-56 md:pt-72 lg:pt-96"
           >
             <a 
               href="https://docs.google.com/forms/d/e/1FAIpQLSdkzkzO1tpNbt7-L6QMA7eW7tB745nKK0Sxcl0ByUpyaUnv4w/viewform?usp=dialog"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button size="lg" className="text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 rounded-full hover:scale-110 transition-all duration-300 cursor-hover bg-white hover:bg-white/90 text-black font-bold shadow-xl font-heading">
+              <Button size="lg" className="text-sm sm:text-lg px-5 sm:px-8 py-4 sm:py-6 rounded-full hover:scale-110 transition-all duration-300 cursor-hover bg-white hover:bg-white/90 text-black font-bold shadow-xl font-heading">
                 Pre-Book Now
               </Button>
             </a>
@@ -82,7 +82,7 @@ const Home = () => {
         <section className="py-20 sm:py-24 md:py-28 px-4 bg-gradient-to-b from-background/50 to-background">
           <div className="container mx-auto text-center max-w-6xl">
             <ScrollFloat offset={35}>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black mb-8 sm:mb-12 font-aller text-foreground text-glow-strong px-4">
+              <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black mb-6 sm:mb-12 font-aller text-foreground text-glow-strong px-4">
                 TEDxAhlconIntlSchool is{' '}
                 <RotatingText
                   words={['Back', 'Bigger', 'Better', 'Bolder']}
@@ -105,15 +105,15 @@ const Home = () => {
             </div>
             <div className="bg-gradient-to-br from-card/90 to-card/60 backdrop-blur-lg border-2 border-primary/40 rounded-3xl p-6 sm:p-8 md:p-10 shadow-2xl hover:shadow-primary/40 transition-all duration-500 hover:border-primary/60 hover:scale-[1.02]">
               <div className="space-y-6 sm:space-y-8">
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 text-lg sm:text-xl md:text-2xl font-varela text-foreground font-bold">
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 text-sm sm:text-xl md:text-2xl font-varela text-foreground font-bold">
                   <div className="flex items-center gap-3 sm:gap-4">
-                    <span className="text-2xl sm:text-3xl md:text-4xl">📅</span>
-                    <span className="text-center sm:text-left">November 1st, 2025 : 9:00 AM IST</span>
+                    <span className="text-xl sm:text-3xl md:text-4xl">📅</span>
+                    <span className="text-center sm:text-left">Nov 1, 2025 · 9:00 AM IST</span>
                   </div>
                 </div>
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 text-lg sm:text-xl md:text-2xl font-varela text-foreground font-bold">
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 text-sm sm:text-xl md:text-2xl font-varela text-foreground font-bold">
                   <div className="flex items-center gap-3 sm:gap-4">
-                    <span className="text-2xl sm:text-3xl md:text-4xl">📍</span>
+                    <span className="text-xl sm:text-3xl md:text-4xl">📍</span>
                     <span className="text-center sm:text-left">Ahlcon International School, Mayur Vihar Phase 1, Delhi</span>
                   </div>
                 </div>
