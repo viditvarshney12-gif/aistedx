@@ -29,7 +29,7 @@ const Home = () => {
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         {/* Background Image */}
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          className="absolute inset-0 bg-contain sm:bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${heroBackground})` }}
         />
 
@@ -39,7 +39,7 @@ const Home = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="pt-64 sm:pt-72 md:pt-80 lg:pt-96"
+            className="pt-40 sm:pt-56 md:pt-72 lg:pt-96"
           >
             <a 
               href="https://docs.google.com/forms/d/e/1FAIpQLSdkzkzO1tpNbt7-L6QMA7eW7tB745nKK0Sxcl0ByUpyaUnv4w/viewform?usp=dialog"
@@ -145,6 +145,7 @@ const Home = () => {
 
       <ContentBlock
         heading="About TEDxAhlconIntlSchool"
+        headingClassName="text-3xl sm:text-4xl md:text-5xl"
         body={
           <div className="space-y-4">
             <p className="font-varela text-base sm:text-lg">

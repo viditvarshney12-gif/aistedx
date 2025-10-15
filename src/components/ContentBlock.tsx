@@ -5,9 +5,10 @@ interface ContentBlockProps {
   body: string | React.ReactNode;
   imageUrl?: string;
   reverse?: boolean;
+  headingClassName?: string; // optional override for heading sizing/styles
 }
 
-const ContentBlock = ({ heading, body, imageUrl, reverse = false }: ContentBlockProps) => {
+const ContentBlock = ({ heading, body, imageUrl, reverse = false, headingClassName }: ContentBlockProps) => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement | null>(null);
 
@@ -44,7 +45,7 @@ const ContentBlock = ({ heading, body, imageUrl, reverse = false }: ContentBlock
               isVisible ? 'opacity-100 translate-x-0' : `opacity-0 ${reverse ? 'translate-x-10' : '-translate-x-10'}`
             } ${reverse ? 'lg:order-2' : ''}`}
           >
-            <h2 className="text-4xl sm:text-5xl md:text-[58px] font-black mb-8 text-foreground text-glow-strong font-aller">
+            <h2 className={`${headingClassName ? headingClassName : 'text-4xl sm:text-5xl md:text-[58px]'} font-black mb-8 text-foreground text-glow-strong font-aller`}>
               {heading}
             </h2>
             <div className="w-20 h-1 bg-primary rounded-full" />

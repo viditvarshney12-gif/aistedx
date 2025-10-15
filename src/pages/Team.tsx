@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CustomCursor from "@/components/CustomCursor";
+import ShinyText from "@/components/effects/ShinyText";
 import FuzzyText from "@/components/effects/FuzzyText";
 import ScrollReveal from "@/components/effects/ScrollReveal";
 import ScrollFloat from "@/components/effects/ScrollFloat";
@@ -13,19 +14,19 @@ const Team = () => {
       <Navbar />
       
       {/* Hero Section with Image */}
-      <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[50vh] sm:h-[60vh] min-h-[320px] sm:min-h-[500px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
             src={teamPhoto}
             alt="Our Team"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-contain sm:object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/70 to-background" />
         </div>
         <div className="relative z-10 container mx-auto px-4 text-center">
           <ScrollFloat>
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-foreground text-glow-strong mb-6 font-aller">
-              The Team
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-4 sm:mb-6 font-aller">
+              <ShinyText className="text-foreground text-glow-strong">The Team</ShinyText>
             </h1>
           </ScrollFloat>
         </div>
