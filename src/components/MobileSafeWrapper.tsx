@@ -34,22 +34,8 @@ const MobileSafeWrapper = ({ children, fallback }: MobileSafeWrapperProps) => {
   }, [isMobile]);
 
   if (hasError && isMobile) {
-    return (
-      <div className="min-h-screen bg-background flex items-center justify-center p-4">
-        <div className="text-center">
-          <h1 className="text-2xl font-bold text-foreground mb-4">TEDxAhlconIntlSchool</h1>
-          <p className="text-muted-foreground mb-6">Loading content...</p>
-          <a 
-            href="https://docs.google.com/forms/d/e/1FAIpQLSdkzkzO1tpNbt7-L6QMA7eW7tB745nKK0Sxcl0ByUpyaUnv4w/viewform?usp=dialog"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-primary text-white px-6 py-3 rounded-full font-bold hover:bg-primary/90 transition-colors"
-          >
-            Buy Tickets Now
-          </a>
-        </div>
-      </div>
-    );
+    console.warn("MobileSafeWrapper suppressed an error, but continuing to render.");
+    return <>{children}</>;
   }
 
   return <>{children}</>;
