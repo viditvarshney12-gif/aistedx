@@ -129,9 +129,8 @@ const Home = () => {
                   <div className="flex items-start gap-3 sm:gap-4">
                     <span className="text-xl sm:text-3xl md:text-4xl">📍</span>
                     <span className="text-center sm:text-left leading-tight">
-                      <span className="block sm:inline">Ahlcon International School</span>
-                      <br className="block sm:hidden" />
-                      <span className="block sm:inline">Mayur Vihar - 1, Delhi</span>
+                      <span className="block">Ahlcon International School</span>
+                      <span className="block">Mayur Vihar - 1, Delhi</span>
                     </span>
                   </div>
                 </div>
