@@ -119,16 +119,19 @@ const Home = () => {
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 text-sm sm:text-xl md:text-2xl font-varela text-foreground font-bold">
                   <div className="flex items-center gap-3 sm:gap-4">
                     <span className="text-xl sm:text-3xl md:text-4xl">📅</span>
-                    <span className="text-center sm:text-left">1st November, 2025 · 9:00 AM IST</span>
+                    <span className="text-center sm:text-left">
+                      <span className="block sm:inline">1st November, 2025</span>
+                      <span className="block sm:inline sm:before:content-['·'] sm:before:px-2">9:00 AM IST</span>
+                    </span>
                   </div>
                 </div>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 text-sm sm:text-xl md:text-2xl font-varela text-foreground font-bold">
                   <div className="flex items-start gap-3 sm:gap-4">
                     <span className="text-xl sm:text-3xl md:text-4xl">📍</span>
                     <span className="text-center sm:text-left leading-tight">
-                      Ahlcon International School,
-                      <br className="hidden md:block" />
-                      Mayur Vihar Phase - 1, Delhi
+                      <span className="block sm:inline">Ahlcon International School</span>
+                      <br className="block sm:hidden" />
+                      <span className="block sm:inline">Mayur Vihar - 1, Delhi</span>
                     </span>
                   </div>
                 </div>
@@ -168,7 +171,8 @@ const Home = () => {
             </p>
             <div className="pt-4 space-y-3">
               <p className="text-base sm:text-lg font-varela text-primary text-glow">
-                📅 1st November, 2025 : 9:00 AM IST
+                <span className="block sm:inline">📅 1st November, 2025</span>
+                <span className="block sm:inline sm:before:content-[':'] sm:before:px-1">9:00 AM IST</span>
               </p>
               <p className="text-base sm:text-lg font-varela text-primary text-glow">
                 📍 Ahlcon International School, Mayur Vihar Phase 1, Delhi
