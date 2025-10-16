@@ -128,7 +128,7 @@ const Home = () => {
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 text-sm sm:text-xl md:text-2xl font-varela text-foreground font-bold">
                   <div className="flex items-start gap-3 sm:gap-4">
                     <span className="text-xl sm:text-3xl md:text-4xl">📍</span>
-                    <span className="text-center sm:text-left leading-tight">
+                    <span className="text-center sm:text-left lg:text-center leading-tight">
                       <span className="block">Ahlcon International School</span>
                       <span className="block">Mayur Vihar - 1, Delhi</span>
                     </span>
