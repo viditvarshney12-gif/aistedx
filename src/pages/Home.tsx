@@ -119,7 +119,7 @@ const Home = () => {
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 text-sm sm:text-xl md:text-2xl font-varela text-foreground font-bold">
                   <div className="flex items-center gap-3 sm:gap-4">
                     <span className="text-xl sm:text-3xl md:text-4xl">📅</span>
-                    <span className="text-center sm:text-left">Nov 1, 2025 · 9:00 AM IST</span>
+                    <span className="text-center sm:text-left">1st November, 2025 · 9:00 AM IST</span>
                   </div>
                 </div>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 text-sm sm:text-xl md:text-2xl font-varela text-foreground font-bold">
@@ -168,7 +168,7 @@ const Home = () => {
             </p>
             <div className="pt-4 space-y-3">
               <p className="text-base sm:text-lg font-varela text-primary text-glow">
-                📅 November 1st, 2025 : 9:00 AM IST
+                📅 1st November, 2025 : 9:00 AM IST
               </p>
               <p className="text-base sm:text-lg font-varela text-primary text-glow">
                 📍 Ahlcon International School, Mayur Vihar Phase 1, Delhi

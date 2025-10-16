@@ -1,6 +1,15 @@
 import { Instagram, Twitter } from "lucide-react";
 
 const Footer = () => {
+  const handleHomeClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    // Check if we're already on the home page
+    if (window.location.hash === '#/' || window.location.hash === '') {
+      e.preventDefault();
+      // Scroll to top
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
   return (
     <footer className="bg-card border-t border-border mt-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
@@ -19,7 +28,11 @@ const Footer = () => {
             <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Quick Links</h4>
             <ul className="space-y-2 sm:space-y-3">
               <li>
-                <a href="#/" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block text-sm sm:text-base cursor-hover">
+                <a 
+                  href="#/" 
+                  onClick={handleHomeClick}
+                  className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block text-sm sm:text-base cursor-hover"
+                >
                   Home
                 </a>
               </li>
