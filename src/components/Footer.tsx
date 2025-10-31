@@ -46,11 +46,7 @@ const Footer = () => {
                   Speakers
                 </a>
               </li>
-              <li>
-                <a href="#/team" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block text-sm sm:text-base cursor-hover">
-                  The Team
-                </a>
-              </li>
+              {/* The Team link temporarily removed */}
             </ul>
           </div>
 

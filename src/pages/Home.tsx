@@ -44,23 +44,19 @@ const Home = () => {
             transition={{ duration: 0.8 }}
             className="md:pt-60 lg:pt-80"
           >
-            <a 
-              href="https://docs.google.com/forms/d/e/1FAIpQLSdkzkzO1tpNbt7-L6QMA7eW7tB745nKK0Sxcl0ByUpyaUnv4w/viewform?usp=dialog"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <div>
               {/* Mobile: position CTA on lower end of hero image; Desktop: normal flow */}
               <span className="block md:hidden absolute bottom-8 left-1/2 -translate-x-1/2">
                 <Button size="lg" className="text-[10px] px-5 py-2 rounded-full tracking-wide hover:scale-110 transition-all duration-300 cursor-hover bg-white hover:bg-white/90 text-black font-bold shadow-xl font-heading">
-                  Pre-Book Now
+                  Sold Out!
                 </Button>
               </span>
               <span className="hidden md:inline-block md:absolute md:bottom-36 md:left-1/2 md:-translate-x-1/2">
                 <Button size="lg" className="text-lg px-8 py-6 rounded-full hover:scale-110 transition-all duration-300 cursor-hover bg-white hover:bg-white/90 text-black font-bold shadow-xl font-heading">
-                Pre-Book Now
+                Sold Out!
                 </Button>
               </span>
-            </a>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -170,8 +166,7 @@ const Home = () => {
             </p>
             <div className="pt-4 space-y-3">
               <p className="text-base sm:text-lg font-varela text-primary text-glow">
-                <span className="block sm:inline">📅 1st November, 2025</span>
-                <span className="block sm:inline sm:before:content-[':'] sm:before:px-1">9:00 AM IST</span>
+                Tickets Sold Out!
               </p>
               <p className="text-base sm:text-lg font-varela text-primary text-glow">
                 📍 Ahlcon International School, Mayur Vihar Phase 1, Delhi

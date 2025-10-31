@@ -56,19 +56,14 @@ const NotFound = () => {
                   Return to Home
                 </Button>
               </a>
-              <a 
-                href="https://docs.google.com/forms/d/e/1FAIpQLSdkzkzO1tpNbt7-L6QMA7eW7tB745nKK0Sxcl0ByUpyaUnv4w/viewform?usp=dialog"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Button 
+                size="lg" 
+                variant="outline"
+                className="text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-5 rounded-full border-primary text-primary font-bold shadow-xl"
+                disabled
               >
-                <Button 
-                  size="lg" 
-                  variant="outline"
-                  className="text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-5 rounded-full hover:scale-110 transition-all duration-300 cursor-hover border-primary text-primary hover:bg-primary hover:text-white font-bold shadow-xl"
-                >
-                  Buy Tickets Now
-                </Button>
-              </a>
+                Sold Out!
+              </Button>
             </div>
           </motion.div>
         </motion.div>

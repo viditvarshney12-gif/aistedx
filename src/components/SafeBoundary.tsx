@@ -37,12 +37,7 @@ class SafeBoundary extends Component<Props, State> {
               <a href="/about">
                 <Button variant="outline" className="border-primary text-primary">About</Button>
               </a>
-              <a 
-                href="https://docs.google.com/forms/d/e/1FAIpQLSdkzkzO1tpNbt7-L6QMA7eW7tB745nKK0Sxcl0ByUpyaUnv4w/viewform?usp=dialog"
-                target="_blank" rel="noopener noreferrer"
-              >
-                <Button className="bg-primary text-white">Buy Tickets</Button>
-              </a>
+              <Button variant="outline" className="border-primary text-primary" disabled>Sold Out!</Button>
             </div>
           </div>
           <Footer />

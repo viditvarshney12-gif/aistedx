@@ -20,7 +20,7 @@ const NavbarInner = () => {
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
     { name: "Speakers", path: "/speakers" },
-    { name: "The Team", path: "/team" },
+    // The Team temporarily hidden
   ];
 
   return (
@@ -110,7 +110,7 @@ const Navbar = () => {
               <a href="/" className="text-sm lg:text-base font-medium text-foreground">Home</a>
               <a href="#/about" className="text-sm lg:text-base font-medium text-foreground">About</a>
               <a href="#/speakers" className="text-sm lg:text-base font-medium text-foreground">Speakers</a>
-              <a href="#/team" className="text-sm lg:text-base font-medium text-foreground">The Team</a>
+              {/* The Team temporarily hidden */}
             </div>
           </div>
         </div>
